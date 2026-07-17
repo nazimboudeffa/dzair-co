@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Comment utiliser – Annuaire des sites institutionnels algériens</title>
+<style>
+  :root {
+    --green: #006233;
+    --green-dark: #004323;
+    --bg: #f7f7f5;
+    --card: #ffffff;
+    --text: #1c1c1c;
+    --muted: #6b6b6b;
+    --border: #e3e3df;
+    --accent: #b8860b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  header {
+    background: linear-gradient(135deg, #006233 0%, #004323 100%);
+    color: #fff;
+    padding: 2.5rem 1.5rem 2rem;
+    text-align: center;
+  }
+  header h1 {
+    margin: 0 0 0.4rem;
+    font-size: 1.9rem;
+    letter-spacing: 0.3px;
+  }
+  header p {
+    margin: 0;
+    color: #d9e9df;
+    font-size: 0.95rem;
+  }
+  nav.main-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1.2rem;
+  }
+  nav.main-nav a {
+    color: #d9e9df;
+    text-decoration: none;
+    font-size: 0.92rem;
+    font-weight: 500;
+    padding: 0.3rem 0.8rem;
+    border-radius: 6px;
+    border: 1px solid rgba(255,255,255,0.25);
+    transition: background 0.15s;
+  }
+  nav.main-nav a:hover {
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+  }
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2.5rem 1.5rem 4rem;
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.8rem 2rem;
+    margin-bottom: 1.8rem;
+  }
+  .card h2 {
+    font-size: 1.2rem;
+    color: var(--green);
+    margin: 0 0 1rem;
+    border-bottom: 2px solid #e6f0ea;
+    padding-bottom: 0.6rem;
+  }
+  .card p, .card li {
+    color: var(--text);
+    font-size: 0.95rem;
+    margin-bottom: 0.6rem;
+  }
+  .card ol, .card ul {
+    padding-left: 1.3rem;
+    margin: 0.5rem 0 0;
+  }
+  .card li { margin-bottom: 0.5rem; }
+  .github-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #1c1c1c;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.65rem 1.3rem;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-top: 0.8rem;
+    transition: background 0.15s;
+  }
+  .github-cta:hover { background: #333; }
+  .github-cta svg { flex-shrink: 0; }
+  code {
+    background: #eef2ef;
+    color: var(--green-dark);
+    padding: 0.15rem 0.45rem;
+    border-radius: 4px;
+    font-size: 0.88rem;
+  }
+  footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.8rem;
+    padding: 2rem 1rem;
+  }
+</style>
+<script defer data-domain="dzair.co" src="https://plausible.codewithadu.de/js/script.js"></script>
+</head>
+<body>
+
+<header>
+  <h1>🇩🇿 Annuaire des sites institutionnels algériens</h1>
+  <p>Présidence, gouvernement, ministères, wilayas, universités et organismes publics</p>
+  <nav class="main-nav">
+    <a href="index.html">Accueil</a>
+    <a href="howto.html">Comment utiliser</a>
+    <a href="about.html">À propos</a>
+  </nav>
+</header>
+
+<div class="container">
+
+  <div class="card">
+    <h2>Comment utiliser l'annuaire</h2>
+    <ol>
+      <li>Utilisez la <strong>barre de recherche</strong> en haut de la page pour filtrer les sites par nom ou URL.</li>
+      <li>Parcourez les <strong>catégories</strong> (Présidence, Ministères, Wilayas…) via le sommaire.</li>
+      <li>Cliquez directement sur un lien pour ouvrir le site officiel dans un nouvel onglet.</li>
+      <li>Les sites archivés ou temporairement hors ligne sont regroupés dans la section <em>Archive</em> en bas de page.</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h2>Contribuer – ajouter ou corriger un lien</h2>
+    <p>
+      L'annuaire est maintenu sur GitHub. Si vous souhaitez ajouter un site, corriger une URL ou
+      signaler un lien mort, vous pouvez éditer directement le fichier <code>index.html</code> et
+      soumettre une <em>Pull Request</em>.
+    </p>
+    <ol>
+      <li>Ouvrez le dépôt GitHub ci-dessous.</li>
+      <li>Cliquez sur <code>index.html</code> puis sur l'icône ✏️ <strong>Edit this file</strong>.</li>
+      <li>Apportez vos modifications et soumettez une <em>Pull Request</em>.</li>
+    </ol>
+    <a class="github-cta" href="https://github.com/nazimboudeffa/dzair-co" target="_blank" rel="noopener">
+      <svg height="20" width="20" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38
+          0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13
+          -.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66
+          .07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15
+          -.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27
+          .68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12
+          .51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48
+          0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+      </svg>
+      github.com/nazimboudeffa/dzair-co
+    </a>
+  </div>
+
+</div>
+
+<footer>
+  Annuaire des sites institutionnels algériens &mdash; Données publiques
+</footer>
+
+</body>
+</html>

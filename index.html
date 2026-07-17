@@ -1,90 +1,440 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>dzair.co</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Annuaire des sites institutionnels algériens</title>
+<style>
+  :root {
+    --green: #006233;
+    --green-dark: #00opac;
+    --bg: #f7f7f5;
+    --card: #ffffff;
+    --text: #1c1c1c;
+    --muted: #6b6b6b;
+    --border: #e3e3df;
+    --accent: #b8860b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.5;
+  }
+  header {
+    background: linear-gradient(135deg, #006233 0%, #004323 100%);
+    color: #fff;
+    padding: 2.5rem 1.5rem 2rem;
+    text-align: center;
+  }
+  header h1 {
+    margin: 0 0 0.4rem;
+    font-size: 1.9rem;
+    letter-spacing: 0.3px;
+  }
+  header p {
+    margin: 0;
+    color: #d9e9df;
+    font-size: 0.95rem;
+  }
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+  }
+  .search-box {
+    margin: -1.5rem auto 2rem;
+    max-width: 600px;
+    display: block;
+  }
+  .search-box input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    font-size: 1rem;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  }
+  nav.toc {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1rem 1.2rem;
+    margin-bottom: 2rem;
+  }
+  nav.toc h2 {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    color: var(--muted);
+    margin: 0 0 0.6rem;
+  }
+  nav.toc ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.2rem;
+  }
+  nav.toc a {
+    color: var(--green);
+    text-decoration: none;
+    font-size: 0.92rem;
+  }
+  nav.toc a:hover { text-decoration: underline; }
 
-    body {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: #0a0a0a;
-      color: #f0f0f0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-
-    .container {
-      text-align: center;
-      padding: 2rem;
-      max-width: 600px;
-    }
-
-    .domain {
-      font-size: 3rem;
-      font-weight: 700;
-      color: #ffffff;
-      letter-spacing: 2px;
-      margin-bottom: 1.5rem;
-    }
-
-    .domain span {
-      color: #1d9bf0;
-    }
-
-    .message {
-      font-size: 1.2rem;
-      color: #aaaaaa;
-      line-height: 1.8;
-      margin-bottom: 2rem;
-    }
-
-    .contact-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background-color: #1d9bf0;
-      color: #ffffff;
-      text-decoration: none;
-      padding: 0.75rem 1.5rem;
-      border-radius: 9999px;
-      font-size: 1rem;
-      font-weight: 600;
-      transition: background-color 0.2s ease;
-    }
-
-    .contact-link:hover {
-      background-color: #1a8cd8;
-    }
-
-    .x-icon {
-      width: 20px;
-      height: 20px;
-      fill: #ffffff;
-    }
-  </style>
-  <script defer data-domain="dzair.co" src="https://plausible.codewithadu.de/js/script.js"></script>
+  section.category {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.5rem 1.5rem 0.5rem;
+    margin-bottom: 1.8rem;
+  }
+  section.category h2 {
+    font-size: 1.2rem;
+    margin: 0 0 0.3rem;
+    color: var(--green);
+    border-bottom: 2px solid #e6f0ea;
+    padding-bottom: 0.6rem;
+  }
+  section.category .desc {
+    color: var(--muted);
+    font-size: 0.85rem;
+    margin: 0.4rem 0 1rem;
+  }
+  ul.link-list {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 0.5rem 1.2rem;
+  }
+  ul.link-list li {
+    padding: 0.5rem 0;
+    border-bottom: 1px dashed var(--border);
+  }
+  ul.link-list li:last-child { border-bottom: none; }
+  ul.link-list a {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+  }
+  ul.link-list a:hover { color: var(--green); text-decoration: underline; }
+  ul.link-list .url {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--muted);
+    margin-top: 0.1rem;
+    word-break: break-all;
+  }
+  details.archive {
+    background: #faf6ec;
+    border: 1px solid #e9dcb8;
+    border-radius: 10px;
+    padding: 1rem 1.5rem;
+    margin-top: 2.5rem;
+  }
+  details.archive summary {
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--accent);
+    font-size: 1.05rem;
+  }
+  details.archive .desc {
+    color: #7a6a3a;
+    font-size: 0.85rem;
+    margin: 0.6rem 0 1rem;
+  }
+  nav.main-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1.2rem;
+  }
+  nav.main-nav a {
+    color: #d9e9df;
+    text-decoration: none;
+    font-size: 0.92rem;
+    font-weight: 500;
+    padding: 0.3rem 0.8rem;
+    border-radius: 6px;
+    border: 1px solid rgba(255,255,255,0.25);
+    transition: background 0.15s;
+  }
+  nav.main-nav a:hover {
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+  }
+  footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.8rem;
+    padding: 2rem 1rem;
+  }
+  .hidden { display: none !important; }
+  .count-badge {
+    display: inline-block;
+    background: #e6f0ea;
+    color: var(--green);
+    font-size: 0.75rem;
+    padding: 0.1rem 0.55rem;
+    border-radius: 999px;
+    margin-left: 0.5rem;
+    vertical-align: middle;
+  }
+</style>
+<script defer data-domain="dzair.co" src="https://plausible.codewithadu.de/js/script.js"></script>
 </head>
 <body>
-  <div class="container">
-    <div class="domain">dzair<span>.co</span></div>
-    <p class="message">
-      Vous souhaitez obtenir un sous-domaine de <strong>dzair.co</strong> ?<br />
-      Contactez-nous sur Discord et donnez ce que vous voulez, c'est gratuit !
-    </p>
-    <a class="contact-link" href="https://discord.gg/5gGYAWmefk" target="_blank" rel="noopener noreferrer">
-      <svg class="x-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057c.002.022.015.043.033.055a19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
-      </svg>
-      Discord
-    </a>
+
+<header>
+  <h1>🇩🇿 Annuaire des sites institutionnels algériens</h1>
+  <p>Présidence, gouvernement, ministères, wilayas, universités et organismes publics</p>
+  <nav class="main-nav">
+    <a href="howto.html">Comment utiliser</a>
+    <a href="about.html">À propos</a>
+  </nav>
+</header>
+
+<div class="container">
+
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="🔍 Rechercher un site, un ministère, une institution…" onkeyup="filterLinks()">
   </div>
+
+  <nav class="toc">
+    <h2>Sommaire</h2>
+    <ul>
+      <li><a href="#pouvoirs">Pouvoirs publics</a></li>
+      <li><a href="#ministeres">Ministères</a></li>
+      <li><a href="#tutelle">Institutions sous tutelle</a></li>
+      <li><a href="#organismes">Organismes, agences &amp; centres de recherche</a></li>
+      <li><a href="#universites">Universités &amp; écoles</a></li>
+      <li><a href="#collectivites">Wilayas &amp; collectivités locales</a></li>
+      <li><a href="#archives">Archives (anciens liens)</a></li>
+    </ul>
+  </nav>
+
+  <section class="category" id="pouvoirs">
+    <h2>Pouvoirs publics</h2>
+    <p class="desc">Présidence, gouvernement, parlement et institutions de contrôle.</p>
+    <ul class="link-list">
+      <li><a href="https://www.el-mouradia.dz" target="_blank" rel="noopener">Présidence de la République<span class="url">el-mouradia.dz</span></a></li>
+      <li><a href="https://premier-ministre.gov.dz/" target="_blank" rel="noopener">Services du Premier Ministre<span class="url">premier-ministre.gov.dz</span></a></li>
+      <li><a href="http://www.joradp.dz/" target="_blank" rel="noopener">Secrétariat Général du Gouvernement — Journal Officiel<span class="url">joradp.dz</span></a></li>
+      <li><a href="http://www.conseil-constitutionnel.dz/" target="_blank" rel="noopener">Conseil Constitutionnel<span class="url">conseil-constitutionnel.dz</span></a></li>
+      <li><a href="http://www.majliselouma.dz/" target="_blank" rel="noopener">Conseil de la Nation (Sénat)<span class="url">majliselouma.dz</span></a></li>
+      <li><a href="http://www.apn.dz/" target="_blank" rel="noopener">Assemblée Populaire Nationale<span class="url">apn.dz</span></a></li>
+    </ul>
+  </section>
+
+  <section class="category" id="ministeres">
+    <h2>Ministères</h2>
+    <p class="desc">Liens officiels actuels des départements ministériels.</p>
+    <ul class="link-list">
+      <li><a href="https://www.mdn.dz/" target="_blank" rel="noopener">Ministère de la Défense Nationale<span class="url">mdn.dz</span></a></li>
+      <li><a href="https://fr.wikipedia.org/wiki/Minist%C3%A8re_de_l%27Int%C3%A9rieur_et_des_Collectivit%C3%A9s_locales" target="_blank" rel="noopener">Ministère de l'Intérieur, des Collectivités locales et de l'Aménagement du territoire<span class="url">fr.wikipedia.org (fiche)</span></a></li>
+      <li><a href="http://www.mae.gov.dz/" target="_blank" rel="noopener">Ministère des Affaires étrangères et de la Communauté nationale à l'étranger<span class="url">mae.gov.dz</span></a></li>
+      <li><a href="https://www.mjustice.dz/ar/" target="_blank" rel="noopener">Ministère de la Justice, Garde des Sceaux<span class="url">mjustice.dz</span></a></li>
+      <li><a href="https://sante.gov.dz/" target="_blank" rel="noopener">Ministère de la Santé<span class="url">sante.gov.dz</span></a></li>
+      <li><a href="https://www.mf.gov.dz" target="_blank" rel="noopener">Ministère des Finances<span class="url">mf.gov.dz</span></a></li>
+      <li><a href="https://m-moudjahidine.dz/" target="_blank" rel="noopener">Ministère des Affaires religieuses et des Wakfs / Ministère des Moudjahidine et des Ayants-droit<span class="url">m-moudjahidine.dz</span></a></li>
+      <li><a href="https://www.mesrs.dz/" target="_blank" rel="noopener">Ministère de l'Enseignement supérieur et de la Recherche scientifique<span class="url">mesrs.dz</span></a></li>
+      <li><a href="https://startup.dz/" target="_blank" rel="noopener">Ministère de l'Économie de la connaissance, des Start-up et des Micro-entreprises<span class="url">startup.dz</span></a></li>
+      <li><a href="https://www.m-culture.gov.dz/" target="_blank" rel="noopener">Ministère de la Culture et des Arts<span class="url">m-culture.gov.dz</span></a></li>
+      <li><a href="https://www.mpt.gov.dz/" target="_blank" rel="noopener">Ministère de la Poste et des Télécommunications<span class="url">mpt.gov.dz</span></a></li>
+      <li><a href="https://miph.gov.dz/" target="_blank" rel="noopener">Ministère de l'Industrie et de la Production Pharmaceutique<span class="url">miph.gov.dz</span></a></li>
+      <li><a href="http://madrp.gov.dz/" target="_blank" rel="noopener">Ministère de l'Agriculture et du Développement rural<span class="url">madrp.gov.dz</span></a></li>
+      <li><a href="https://www.mhuv.gov.dz/" target="_blank" rel="noopener">Ministère de l'Habitat, de l'Urbanisme et de la Ville<span class="url">mhuv.gov.dz</span></a></li>
+      <li><a href="https://www.ministerecommunication.gov.dz" target="_blank" rel="noopener">Ministère de la Communication<span class="url">ministerecommunication.gov.dz</span></a></li>
+      <li><a href="http://www.mtpt.gov.dz/" target="_blank" rel="noopener">Ministère des Travaux publics et des Infrastructures de base<span class="url">mtpt.gov.dz</span></a></li>
+      <li><a href="https://www.mt.gov.dz/" target="_blank" rel="noopener">Ministère des Transports<span class="url">mt.gov.dz</span></a></li>
+      <li><a href="https://www.mta.gov.dz/" target="_blank" rel="noopener">Ministère du Tourisme et de l'Artisanat<span class="url">mta.gov.dz</span></a></li>
+      <li><a href="https://www.mtess.gov.dz/" target="_blank" rel="noopener">Ministère du Travail, de l'Emploi et de la Sécurité sociale<span class="url">mtess.gov.dz</span></a></li>
+      <li><a href="https://mpeche.gov.dz/" target="_blank" rel="noopener">Ministère de la Pêche et des Productions halieutiques<span class="url">mpeche.gov.dz</span></a></li>
+      <li><a href="https://www.commerce.gov.dz/" target="_blank" rel="noopener">Ministère du Commerce et de la Promotion des exportations<span class="url">commerce.gov.dz</span></a></li>
+      <li><a href="https://www.me.gov.dz/" target="_blank" rel="noopener">Ministère de l'Environnement et des Énergies renouvelables<span class="url">me.gov.dz</span></a></li>
+      <li><a href="https://www.mfep.gov.dz/" target="_blank" rel="noopener">Ministère de la Formation et de l'Enseignement professionnels<span class="url">mfep.gov.dz</span></a></li>
+      <li><a href="https://www.education.gov.dz/" target="_blank" rel="noopener">Ministère de l'Éducation nationale<span class="url">education.gov.dz</span></a></li>
+      <li><a href="https://www.energy.gov.dz" target="_blank" rel="noopener">Ministère de l'Énergie et des Mines<span class="url">energy.gov.dz</span></a></li>
+      <li><a href="https://www.mrp.gov.dz/" target="_blank" rel="noopener">Ministère des Relations avec le Parlement<span class="url">mrp.gov.dz</span></a></li>
+      <li><a href="https://www.mjs.gov.dz/" target="_blank" rel="noopener">Ministère de la Jeunesse et des Sports<span class="url">mjs.gov.dz</span></a></li>
+      <li><a href="https://www.msnfcf.gov.dz/" target="_blank" rel="noopener">Ministère de la Solidarité nationale, de la Famille et de la Condition de la femme<span class="url">msnfcf.gov.dz</span></a></li>
+    </ul>
+  </section>
+
+  <section class="category" id="tutelle">
+    <h2>Institutions sous tutelle (Ministère de l'Intérieur)</h2>
+    <ul class="link-list">
+      <li><a href="http://www.dgsn.dz/" target="_blank" rel="noopener">Direction Générale de la Sûreté Nationale<span class="url">dgsn.dz</span></a></li>
+      <li><a href="http://www.protectioncivile.dz/" target="_blank" rel="noopener">Direction Générale de la Protection Civile<span class="url">protectioncivile.dz</span></a></li>
+      <li><a href="https://www.interieur.gov.dz/index.php/fr/le-ministere/le-minist%C3%A8re/institutions-sous-tutelle/70-ecole-nationale-des-transmissions.html" target="_blank" rel="noopener">École Nationale des Transmissions<span class="url">interieur.gov.dz</span></a></li>
+      <li><a href="http://www.ena.dz/" target="_blank" rel="noopener">École Nationale d'Administration<span class="url">ena.dz</span></a></li>
+      <li><a href="http://www.eniv.dz/" target="_blank" rel="noopener">École Nationale des Ingénieurs de la Ville<span class="url">eniv.dz</span></a></li>
+      <li><a href="http://dnsr.interieur.gov.dz/" target="_blank" rel="noopener">Délégation Nationale à la Sécurité Routière<span class="url">dnsr.interieur.gov.dz</span></a></li>
+      <li><a href="http://dnrm.interieur.gov.dz/" target="_blank" rel="noopener">Délégation Nationale aux Risques Majeurs<span class="url">dnrm.interieur.gov.dz</span></a></li>
+      <li><a href="https://www.interieur.gov.dz/index.php/fr/le-ministere/le-minist%C3%A8re/institutions-sous-tutelle/388-centres-nationaux-de-formation,-de-perfectionnement-et-de-recyclage-des-personnels-des-collectivit%C3%A9s-locales.html" target="_blank" rel="noopener">Centres Nationaux de formation, de perfectionnement et de recyclage des personnels des collectivités locales<span class="url">interieur.gov.dz</span></a></li>
+      <li><a href="http://www.ceneap.com.dz/" target="_blank" rel="noopener">Centre National d'Études et d'Analyses pour la Population et le Développement (CENEAP)<span class="url">ceneap.com.dz</span></a></li>
+      <li><a href="http://www.craag.dz/" target="_blank" rel="noopener">Centre de Recherche en Astronomie, Astrophysique et Géophysique (CRAAG)<span class="url">craag.dz</span></a></li>
+    </ul>
+  </section>
+
+  <section class="category" id="organismes">
+    <h2>Organismes, agences &amp; centres de recherche</h2>
+    <ul class="link-list">
+      <li><a href="http://www.sante.dz" target="_blank" rel="noopener">Institut National de Santé Publique<span class="url">sante.dz</span></a></li>
+      <li><a href="http://www.inapi.org" target="_blank" rel="noopener">Institut National Algérien de la Propriété Industrielle (INAPI)<span class="url">inapi.org</span></a></li>
+      <li><a href="http://www.infpe.edu.dz" target="_blank" rel="noopener">Institut National de Formation des Cadres de l'Éducation (INFPE)<span class="url">infpe.edu.dz</span></a></li>
+      <li><a href="http://www.ifp-alger.edu.dz" target="_blank" rel="noopener">Institut de Formation Professionnelle d'Alger<span class="url">ifp-alger.edu.dz</span></a></li>
+      <li><a href="http://www.cread-dz.com" target="_blank" rel="noopener">Centre de Recherche en Économie Appliquée pour le Développement (CREAD)<span class="url">cread-dz.com</span></a></li>
+      <li><a href="http://www.cnrc.org.dz" target="_blank" rel="noopener">Centre National du Registre du Commerce (CNRC)<span class="url">cnrc.org.dz</span></a></li>
+      <li><a href="http://www.andi.dz" target="_blank" rel="noopener">Agence Nationale du Développement et de l'Investissement (ANDI)<span class="url">andi.dz</span></a></li>
+      <li><a href="http://www.andru.gov.dz" target="_blank" rel="noopener">Agence Nationale pour le Développement de la Recherche Universitaire (ANDRU)<span class="url">andru.gov.dz</span></a></li>
+      <li><a href="http://www.aadl.com.dz" target="_blank" rel="noopener">Agence Nationale pour l'Amélioration et le Développement de l'Habitat (AADL)<span class="url">aadl.com.dz</span></a></li>
+      <li><a href="http://www.orgm.com.dz" target="_blank" rel="noopener">Office National de Recherche Géologique et Minière (ORGM)<span class="url">orgm.com.dz</span></a></li>
+      <li><a href="http://www.ons.dz" target="_blank" rel="noopener">Office National des Statistiques (ONS)<span class="url">ons.dz</span></a></li>
+      <li><a href="http://www.promex.dz" target="_blank" rel="noopener">Office Algérien de Promotion du Commerce Extérieur (PROMEX)<span class="url">promex.dz</span></a></li>
+      <li><a href="http://www.onec.dz" target="_blank" rel="noopener">Office National des Examens et Concours (ONEC)<span class="url">onec.dz</span></a></li>
+      <li><a href="http://www.esi.dz" target="_blank" rel="noopener">Institut National de Formation en Informatique (ESI)<span class="url">esi.dz</span></a></li>
+      <li><a href="http://www.cerist.dz" target="_blank" rel="noopener">Centre de Recherche sur l'Information Scientifique et Technique (CERIST)<span class="url">cerist.dz</span></a></li>
+      <li><a href="http://www.cdta.dz" target="_blank" rel="noopener">Centre de Développement des Technologies Avancées (CDTA)<span class="url">cdta.dz</span></a></li>
+      <li><a href="http://www.crasc.org" target="_blank" rel="noopener">Centre National de Recherche en Anthropologie Sociale et Culturelle (CRASC)<span class="url">crasc.org</span></a></li>
+    </ul>
+  </section>
+
+  <section class="category" id="universites">
+    <h2>Universités &amp; écoles</h2>
+    <p class="desc">Liens issus d'un ancien annuaire — à vérifier, certains ont pu changer d'adresse.</p>
+    <ul class="link-list">
+      <li><a href="http://www.univ-alger.dz" target="_blank" rel="noopener">Université d'Alger<span class="url">univ-alger.dz</span></a></li>
+      <li><a href="http://www.univ-annaba.net" target="_blank" rel="noopener">Université d'Annaba<span class="url">univ-annaba.net</span></a></li>
+      <li><a href="http://www.univ-blida.dz" target="_blank" rel="noopener">Université de Blida<span class="url">univ-blida.dz</span></a></li>
+      <li><a href="http://www.univ-batna.dz" target="_blank" rel="noopener">Université de Batna<span class="url">univ-batna.dz</span></a></li>
+      <li><a href="http://www.univbej.dz" target="_blank" rel="noopener">Université de Béjaïa<span class="url">univbej.dz</span></a></li>
+      <li><a href="http://www.univ-oran.dz" target="_blank" rel="noopener">Université d'Oran<span class="url">univ-oran.dz</span></a></li>
+      <li><a href="http://www.univ-sba.dz" target="_blank" rel="noopener">Université de Sidi Bel Abbès<span class="url">univ-sba.dz</span></a></li>
+      <li><a href="http://www.univ-mosta.dz" target="_blank" rel="noopener">Université de Mostaganem<span class="url">univ-mosta.dz</span></a></li>
+      <li><a href="http://www.univ-tlemcen.dz" target="_blank" rel="noopener">Université de Tlemcen<span class="url">univ-tlemcen.dz</span></a></li>
+      <li><a href="http://www.univ-emir.dz" target="_blank" rel="noopener">Université des Sciences Islamiques Émir Abdelkader<span class="url">univ-emir.dz</span></a></li>
+      <li><a href="http://www.enp.edu.dz/" target="_blank" rel="noopener">École Nationale Polytechnique d'Alger<span class="url">enp.edu.dz</span></a></li>
+      <li><a href="http://www.entp.edu.dz" target="_blank" rel="noopener">École Nationale des Travaux Publics<span class="url">entp.edu.dz</span></a></li>
+      <li><a href="http://www.esb.edu.dz/" target="_blank" rel="noopener">École Supérieure de Banque<span class="url">esb.edu.dz</span></a></li>
+      <li><a href="http://www.enset-oran.dz/" target="_blank" rel="noopener">École Normale Supérieure de l'Enseignement Technique d'Oran<span class="url">enset-oran.dz</span></a></li>
+      <li><a href="http://www.ini.dz" target="_blank" rel="noopener">Institut National d'Informatique<span class="url">ini.dz</span></a></li>
+      <li><a href="http://www.ensh.edu.dz" target="_blank" rel="noopener">École Supérieure de l'Hydraulique<span class="url">ensh.edu.dz</span></a></li>
+      <li><a href="http://www.inre.edu.dz" target="_blank" rel="noopener">Institut National de Recherche en Éducation<span class="url">inre.edu.dz</span></a></li>
+      <li><a href="http://www.cneg.edu.dz" target="_blank" rel="noopener">Centre National de l'Enseignement Généralisé<span class="url">cneg.edu.dz</span></a></li>
+    </ul>
+  </section>
+
+  <section class="category" id="collectivites">
+    <h2>Wilayas &amp; collectivités locales</h2>
+    <p class="desc">Liens issus d'un ancien annuaire — à vérifier, certains sites peuvent avoir disparu.</p>
+    <ul class="link-list">
+      <li><a href="http://www.gga.dz" target="_blank" rel="noopener">Wilaya d'Alger<span class="url">gga.dz</span></a></li>
+      <li><a href="http://www.wilayadeannaba.com" target="_blank" rel="noopener">Wilaya d'Annaba<span class="url">wilayadeannaba.com</span></a></li>
+      <li><a href="http://www.webejaia.gov.dz" target="_blank" rel="noopener">Wilaya de Béjaïa<span class="url">webejaia.gov.dz</span></a></li>
+      <li><a href="http://www.wain.temouchent.gov.dz" target="_blank" rel="noopener">Wilaya d'Aïn Témouchent<span class="url">wain.temouchent.gov.dz</span></a></li>
+      <li><a href="http://www.bba.gov.dz" target="_blank" rel="noopener">Wilaya de Bordj Bou Arréridj<span class="url">bba.gov.dz</span></a></li>
+      <li><a href="http://www.wbouira.gov.dz" target="_blank" rel="noopener">Wilaya de Bouira<span class="url">wbouira.gov.dz</span></a></li>
+      <li><a href="http://www.wdjelfa.gov.dz" target="_blank" rel="noopener">Wilaya de Djelfa<span class="url">wdjelfa.gov.dz</span></a></li>
+      <li><a href="http://www.wmascara.gov.dz" target="_blank" rel="noopener">Wilaya de Mascara<span class="url">wmascara.gov.dz</span></a></li>
+      <li><a href="http://wilayadeskikda.com" target="_blank" rel="noopener">Wilaya de Skikda<span class="url">wilayadeskikda.com</span></a></li>
+      <li><a href="http://www.wtiaret.gov.dz" target="_blank" rel="noopener">Wilaya de Tiaret<span class="url">wtiaret.gov.dz</span></a></li>
+      <li><a href="http://www.wtiziouzou.gov.dz" target="_blank" rel="noopener">Wilaya de Tizi-Ouzou<span class="url">wtiziouzou.gov.dz</span></a></li>
+      <li><a href="http://www.apc-tissemsilt.gov.dz" target="_blank" rel="noopener">APC (Commune) de Tissemsilt<span class="url">apc-tissemsilt.gov.dz</span></a></li>
+      <li><a href="http://www.apc-constantine.gov.dz" target="_blank" rel="noopener">APC de Constantine<span class="url">apc-constantine.gov.dz</span></a></li>
+    </ul>
+  </section>
+
+  <details class="archive" id="archives">
+    <summary>📦 Archives — anciens liens (probablement obsolètes, non vérifiés)</summary>
+    <p class="desc">Ces liens proviennent d'une ancienne version de l'annuaire (début des années 2000). Beaucoup de domaines ont probablement expiré ou changé d'adresse. Conservés ici à titre historique — à vérifier avant toute publication.</p>
+    <ul class="link-list">
+      <li><a href="http://www.gouvernement.dz/" target="_blank" rel="noopener">Secrétariat Général du Gouvernement<span class="url">gouvernement.dz</span></a></li>
+      <li><a href="http://www.apn-dz.org/french/index.htm" target="_blank" rel="noopener">Assemblée Populaire Nationale<span class="url">apn-dz.org</span></a></li>
+      <li><a href="http://www.coursupreme-dz.org" target="_blank" rel="noopener">Cour Suprême<span class="url">coursupreme-dz.org</span></a></li>
+      <li><a href="http://www.conseilconstitutionnel-dz.org/" target="_blank" rel="noopener">Conseil Constitutionnel<span class="url">conseilconstitutionnel-dz.org</span></a></li>
+      <li><a href="http://www.ccomptes.org.dz" target="_blank" rel="noopener">Cour des Comptes<span class="url">ccomptes.org.dz</span></a></li>
+      <li><a href="http://www.arpt.dz/" target="_blank" rel="noopener">Autorité de Régulation de la Poste et des Télécommunications (ARPT)<span class="url">arpt.dz</span></a></li>
+      <li><a href="http://www.hci-dz.org" target="_blank" rel="noopener">Haut Conseil Islamique<span class="url">hci-dz.org</span></a></li>
+      <li><a href="http://www.cnes.dz/" target="_blank" rel="noopener">Conseil National Économique et Social (CNES)<span class="url">cnes.dz</span></a></li>
+      <li><a href="http://www.ansej.org.dz/" target="_blank" rel="noopener">Agence Nationale de Soutien à l'Emploi des Jeunes (ANSEJ)<span class="url">ansej.org.dz</span></a></li>
+      <li><a href="http://www.aprue.org.dz/" target="_blank" rel="noopener">Agence pour la Promotion et la Rationalisation de l'Utilisation de l'Énergie (APRUE)<span class="url">aprue.org.dz</span></a></li>
+      <li><a href="http://www.cosob.com.dz/" target="_blank" rel="noopener">Commission d'Organisation et de Surveillance des Opérations de Bourse (COSOB)<span class="url">cosob.com.dz</span></a></li>
+      <li><a href="http://www.appeloffres.entreprises-dz.com" target="_blank" rel="noopener">BOMOP — Appels d'Offres Internationales<span class="url">appeloffres.entreprises-dz.com</span></a></li>
+      <li><a href="http://www.apsi.com.dz/" target="_blank" rel="noopener">Agence pour la Promotion, le Soutien et le Suivi des Investissements (APSI)<span class="url">apsi.com.dz</span></a></li>
+      <li><a href="http://www.archives-dgan.gov.dz" target="_blank" rel="noopener">Direction des Archives Nationales<span class="url">archives-dgan.gov.dz</span></a></li>
+      <li><a href="http://www.douane.dz" target="_blank" rel="noopener">Douanes Algériennes<span class="url">douane.dz</span></a></li>
+      <li><a href="http://www.caci-com.dz" target="_blank" rel="noopener">Chambre Algérienne de Commerce et d'Industrie (CACI)<span class="url">caci-com.dz</span></a></li>
+      <li><a href="http://www.samasafia.dz" target="_blank" rel="noopener">Réseau de Surveillance de la Qualité de l'Air (SAMASAFIA)<span class="url">samasafia.dz</span></a></li>
+      <li><a href="http://www.mae.dz/" target="_blank" rel="noopener">Ministère des Affaires Étrangères (ancien lien)<span class="url">mae.dz</span></a></li>
+      <li><a href="http://www.mjustice.dz" target="_blank" rel="noopener">Ministère de la Justice (ancien lien)<span class="url">mjustice.dz</span></a></li>
+      <li><a href="http://www.mcc.gov.dz" target="_blank" rel="noopener">Ministère de la Communication et de la Culture (ancien)<span class="url">mcc.gov.dz</span></a></li>
+      <li><a href="http://www.mir-algeria.org" target="_blank" rel="noopener">Ministère de l'Industrie et de la Restructuration<span class="url">mir-algeria.org</span></a></li>
+      <li><a href="http://www.mem-algeria.org" target="_blank" rel="noopener">Ministère de l'Énergie et des Mines (ancien)<span class="url">mem-algeria.org</span></a></li>
+      <li><a href="http://www.mdccne.gov.dz/index.htm" target="_blank" rel="noopener">Ministère délégué chargé de la Communauté nationale à l'étranger<span class="url">mdccne.gov.dz</span></a></li>
+      <li><a href="http://www.meducation.edu.dz" target="_blank" rel="noopener">Ministère de l'Éducation Nationale (ancien)<span class="url">meducation.edu.dz</span></a></li>
+      <li><a href="http://www.mers.edu.dz/french/index.htm" target="_blank" rel="noopener">Ministère de l'Enseignement Supérieur et de la Recherche (ancien)<span class="url">mers.edu.dz</span></a></li>
+      <li><a href="http://www.msnf.gov.dz/" target="_blank" rel="noopener">Ministère de la Solidarité Nationale et de la Famille (ancien)<span class="url">msnf.gov.dz</span></a></li>
+      <li><a href="http://www.barid.dz/" target="_blank" rel="noopener">Ministère des Postes et Télécommunications (ancien)<span class="url">barid.dz</span></a></li>
+      <li><a href="http://www.mpcr-dz.com/" target="_blank" rel="noopener">Ministère de la Participation et de la Coordination des Réformes<span class="url">mpcr-dz.com</span></a></li>
+      <li><a href="http://www.environnement-dz.org" target="_blank" rel="noopener">Ministère de l'Aménagement du Territoire et de l'Environnement<span class="url">environnement-dz.org</span></a></li>
+      <li><a href="http://www.finance-algeria.org/" target="_blank" rel="noopener">Ministère des Finances (ancien)<span class="url">finance-algeria.org</span></a></li>
+      <li><a href="http://www.impots-dz.org/" target="_blank" rel="noopener">Direction Générale des Impôts<span class="url">impots-dz.org</span></a></li>
+      <li><a href="http://www.pmepmi-dz.com/index.html" target="_blank" rel="noopener">Ministère de la Petite et Moyenne Entreprise<span class="url">pmepmi-dz.com</span></a></li>
+      <li><a href="http://www.mfp.gov.dz" target="_blank" rel="noopener">Ministère de la Formation Professionnelle (ancien)<span class="url">mfp.gov.dz</span></a></li>
+      <li><a href="http://www.mhu.gov.dz" target="_blank" rel="noopener">Ministère de l'Habitat et de l'Urbanisme (ancien)<span class="url">mhu.gov.dz</span></a></li>
+      <li><a href="http://www.mtss.gov.dz" target="_blank" rel="noopener">Ministère du Travail et de la Sécurité Sociale (ancien)<span class="url">mtss.gov.dz</span></a></li>
+      <li><a href="http://www.minagri-algeria.org" target="_blank" rel="noopener">Ministère de l'Agriculture et du Développement Rural (ancien)<span class="url">minagri-algeria.org</span></a></li>
+      <li><a href="http://www.emb-argelia.pt/" target="_blank" rel="noopener">Ambassade d'Algérie au Portugal<span class="url">emb-argelia.pt</span></a></li>
+      <li><a href="http://www.algeria-us.org/" target="_blank" rel="noopener">Ambassade d'Algérie à Washington<span class="url">algeria-us.org</span></a></li>
+      <li><a href="http://www.algerianemb.or.kr/" target="_blank" rel="noopener">Ambassade d'Algérie à Séoul<span class="url">algerianemb.or.kr</span></a></li>
+      <li><a href="http://www.ambalgoott.com/" target="_blank" rel="noopener">Ambassade d'Algérie à Ottawa<span class="url">ambalgoott.com</span></a></li>
+      <li><a href="http://www.consalglond.u-net.com/" target="_blank" rel="noopener">Consulat d'Algérie en Grande-Bretagne<span class="url">consalglond.u-net.com</span></a></li>
+      <li><a href="http://www.ambassade-info.dk/algcphe.htm" target="_blank" rel="noopener">Ambassade d'Algérie à Copenhague<span class="url">ambassade-info.dk</span></a></li>
+      <li><a href="http://www.consulat-algerie.ch" target="_blank" rel="noopener">Consulat d'Algérie à Genève<span class="url">consulat-algerie.ch</span></a></li>
+      <li><a href="http://www.3.itu.int/mission/algeria" target="_blank" rel="noopener">Mission Permanente auprès des Nations Unies à Genève<span class="url">itu.int</span></a></li>
+      <li><a href="http://www.algeria-un.org/nspage.html" target="_blank" rel="noopener">Mission Permanente auprès des Nations Unies à New York<span class="url">algeria-un.org</span></a></li>
+      <li><a href="http://www.ccanada.qc.ca" target="_blank" rel="noopener">Centre Culturel Algérien à Montréal<span class="url">ccanada.qc.ca</span></a></li>
+      <li><a href="http://cirta2500.homepage.com/cne2500.htm" target="_blank" rel="noopener">Wilaya de Constantine<span class="url">cirta2500.homepage.com</span></a></li>
+      <li><a href="http://geocities.com/dromadaire.net/" target="_blank" rel="noopener">Wilaya de Ouargla<span class="url">geocities.com</span></a></li>
+      <li><a href="http://isuisse.ifrance.com/dairadesetif/" target="_blank" rel="noopener">Daïra de Sétif<span class="url">isuisse.ifrance.com</span></a></li>
+      <li><a href="http://208.230.133.164" target="_blank" rel="noopener">Université de la Formation Continue<span class="url">208.230.133.164</span></a></li>
+      <li><a href="http://www.cerist.dz/ena/index.htm" target="_blank" rel="noopener">École Nationale d'Administration (ancien lien)<span class="url">cerist.dz/ena</span></a></li>
+    </ul>
+  </details>
+
+</div>
+
+<footer>
+  Annuaire généré à partir d'une liste de sites institutionnels algériens — liens dédupliqués et classés par catégorie.<br>
+  Certaines adresses, notamment dans la section « Archives », peuvent être obsolètes : à vérifier avant mise en ligne.
+</footer>
+
+<script>
+function filterLinks() {
+  const q = document.getElementById('searchInput').value.toLowerCase().trim();
+  document.querySelectorAll('.category, details.archive').forEach(section => {
+    let sectionHasMatch = false;
+    section.querySelectorAll('ul.link-list > li').forEach(li => {
+      const text = li.textContent.toLowerCase();
+      const match = text.includes(q);
+      li.classList.toggle('hidden', !match);
+      if (match) sectionHasMatch = true;
+    });
+    section.classList.toggle('hidden', q.length > 0 && !sectionHasMatch);
+    if (q.length > 0 && sectionHasMatch && section.tagName.toLowerCase() === 'details') {
+      section.open = true;
+    }
+  });
+}
+</script>
+
 </body>
 </html>
