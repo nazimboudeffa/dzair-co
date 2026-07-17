@@ -106,6 +106,27 @@
     color: #d9e9df;
     font-size: 0.95rem;
   }
+  nav.main-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+  nav.main-nav a {
+    color: #d9e9df;
+    text-decoration: none;
+    font-size: 0.92rem;
+    font-weight: 500;
+    padding: 0.3rem 0.8rem;
+    border-radius: 6px;
+    border: 1px solid rgba(255,255,255,0.25);
+    transition: background 0.15s;
+  }
+  nav.main-nav a:hover {
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+  }
   .container {
     max-width: 1100px;
     margin: 0 auto;
@@ -260,12 +281,13 @@
 <body>
 
 <header>
-  <h1>Annuaire des sites institutionnels algériens</h1>
-  <p>Présidence, gouvernement, ministères, wilayas, universités et organismes publics</p>
   <nav class="main-nav">
+    <a href="index.html">Accueil</a>
     <a href="howto.html">Comment utiliser</a>
     <a href="about.html">À propos</a>
   </nav>
+  <h1>Annuaire des sites institutionnels algériens</h1>
+  <p>Présidence, gouvernement, ministères, wilayas, universités et organismes publics</p>
 </header>
 
 <div class="container">
