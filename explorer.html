@@ -92,14 +92,35 @@
     margin: -1.5rem auto 2rem;
     max-width: 600px;
     display: block;
+    position: relative;
   }
   .search-box input {
     width: 100%;
-    padding: 0.8rem 1rem;
-    border-radius: 8px;
-    border: 1px solid var(--border);
+    padding: 1rem 1rem 1rem 2.8rem;
+    border-radius: 10px;
+    border: 2px solid #e3e3df;
     font-size: 1rem;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: all 0.25s ease;
+  }
+  .search-box input::placeholder {
+    color: #9da9a0;
+  }
+  .search-box input:focus {
+    outline: none;
+    border-color: #006233;
+    box-shadow: 0 0 0 4px rgba(0,98,51,0.1), 0 8px 24px rgba(0,0,0,0.12);
+  }
+  .search-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    width: 18px;
+    height: 18px;
+    fill: #9da9a0;
   }
   nav.toc {
     background: var(--card);
