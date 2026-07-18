@@ -1,0 +1,912 @@
+{
+  "data": [
+    {
+      "name": "Présidence de la République",
+      "url": "https://www.el-mouradia.dz",
+      "description": "Site officiel de la Présidence de la République algérienne",
+      "category": "Pouvoirs publics"
+    },
+    {
+      "name": "Services du Premier Ministre",
+      "url": "https://premier-ministre.gov.dz/",
+      "description": "Site du gouvernement algérien",
+      "category": "Pouvoirs publics"
+    },
+    {
+      "name": "Secrétariat Général du Gouvernement — Journal Officiel",
+      "url": "http://www.joradp.dz/",
+      "description": "Journal Officiel de l'État algérien",
+      "category": "Pouvoirs publics"
+    },
+    {
+      "name": "Conseil Constitutionnel",
+      "url": "http://www.conseil-constitutionnel.dz/",
+      "description": "Conseil constitutionnel de la République",
+      "category": "Pouvoirs publics"
+    },
+    {
+      "name": "Conseil de la Nation (Sénat)",
+      "url": "http://www.majliselouma.dz/",
+      "description": "Sénat de l'Algérie",
+      "category": "Pouvoirs publics"
+    },
+    {
+      "name": "Assemblée Populaire Nationale",
+      "url": "http://www.apn.dz/",
+      "description": "Parlement national d'Algérie",
+      "category": "Pouvoirs publics"
+    },
+    {
+      "name": "Ministère de la Défense Nationale",
+      "url": "https://www.mdn.dz/",
+      "description": "Ministère de la défense et de la sécurité nationale",
+      "category": "Ministères"
+    },
+    {
+      "name": "Ministère de l'Intérieur et des Collectivités locales",
+      "url": "http://www.fr.wikipedia.org/wiki/Minist%C3%A8re_de_l%27Int%C3%A9rieur_et_des_Collectivit%C3%A9s_locales",
+      "description": "Fiche Wikipedia du ministère",
+      "category": "Ministères"
+    },
+    {
+      "name": "Ministère des Affaires étrangères",
+      "url": "http://www.mae.gov.dz/",
+      "description": "Diplomatie et relations internationales",
+      "category": "Ministères"
+    },
+    {
+      "name": "Ministère de la Justice",
+      "url": "https://www.mjustice.dz/ar/",
+      "description": "Justice et garde des sceaux",
+      "category": "Ministères"
+    },
+    {
+      "name": "Ministère de la Santé",
+      "url": "https://sante.gov.dz/",
+      "description": "Santé publique et services médicaux",
+      "category": "Ministères"
+    },
+    {
+      "name": "Ministère des Finances",
+      "url": "https://www.mf.gov.dz",
+      "description": "Économie et finances publiques",
+      "category": "Ministères"
+    },
+    {
+      "name": "Ministère des Affaires religieuses",
+      "url": "https://m-moudjahidine.dz/",
+      "description": "Religion et wakfs",
+      "category": "Ministères"
+    },
+    {
+      "name": "Ministère de l'Enseignement supérieur",
+      "url": "https://www.mesrs.dz/",
+      "description": "Éducation et recherche scientifique",
+      "category": "Ministères"
+    },
+    {
+      "name": "Ministère de l'Économie de la connaissance",
+      "url": "https://startup.dz/",
+      "description": "Start-up et micro-entreprises",
+      "category": "Ministères"
+    },
+    {
+      "name": "Ministère de la Culture",
+      "url": "https://www.m-culture.gov.dz/",
+      "description": "Culture, arts et patrimoine",
+      "category": "Ministères"
+    },
+    {
+      "name": "Ministère de la Poste et des Télécommunications",
+      "url": "https://www.mpt.gov.dz/",
+      "description": "Poste et télécommunications",
+      "category": "Ministères"
+    },
+    {
+      "name": "Ministère de l'Industrie",
+      "url": "https://miph.gov.dz/",
+      "description": "Industrie et production pharmaceutique",
+      "category": "Ministères"
+    },
+    {
+      "name": "Ministère de l'Agriculture",
+      "url": "http://madrp.gov.dz/",
+      "description": "Agriculture et développement rural",
+      "category": "Ministères"
+    },
+    {
+      "name": "Ministère de l'Habitat",
+      "url": "https://www.mhuv.gov.dz/",
+      "description": "Habitat, urbanisme et ville",
+      "category": "Ministères"
+    },
+    {
+      "name": "Ministère de la Communication",
+      "url": "https://www.ministerecommunication.gov.dz",
+      "description": "Communication et médias",
+      "category": "Ministères"
+    },
+    {
+      "name": "Ministère des Travaux publics",
+      "url": "http://www.mtpt.gov.dz/",
+      "description": "Travaux publics et infrastructures",
+      "category": "Ministères"
+    },
+    {
+      "name": "Ministère des Transports",
+      "url": "https://www.mt.gov.dz/",
+      "description": "Transport et mobility",
+      "category": "Ministères"
+    },
+    {
+      "name": "Ministère du Tourisme",
+      "url": "https://www.mta.gov.dz/",
+      "description": "Tourisme et artisanat",
+      "category": "Ministères"
+    },
+    {
+      "name": "Ministère du Travail",
+      "url": "https://www.mtess.gov.dz/",
+      "description": "Emploi et sécurité sociale",
+      "category": "Ministères"
+    },
+    {
+      "name": "Ministère de la Pêche",
+      "url": "https://mpeche.gov.dz/",
+      "description": "Pêche et productions halieutiques",
+      "category": "Ministères"
+    },
+    {
+      "name": "Ministère du Commerce",
+      "url": "https://www.commerce.gov.dz/",
+      "description": "Commerce et exportations",
+      "category": "Ministères"
+    },
+    {
+      "name": "Ministère de l'Environnement",
+      "url": "https://www.me.gov.dz/",
+      "description": "Environnement et énergies renouvelables",
+      "category": "Ministères"
+    },
+    {
+      "name": "Ministère de la Formation",
+      "url": "https://www.mfep.gov.dz/",
+      "description": "Formation professionnelle",
+      "category": "Ministères"
+    },
+    {
+      "name": "Ministère de l'Éducation nationale",
+      "url": "https://www.education.gov.dz/",
+      "description": "Éducation de base et scolaire",
+      "category": "Ministères"
+    },
+    {
+      "name": "Ministère de l'Énergie",
+      "url": "https://www.energy.gov.dz",
+      "description": "Énergie et mines",
+      "category": "Ministères"
+    },
+    {
+      "name": "Ministère des Relations avec le Parlement",
+      "url": "https://www.mrp.gov.dz/",
+      "description": "Relations parlementaires",
+      "category": "Ministères"
+    },
+    {
+      "name": "Ministère de la Jeunesse",
+      "url": "https://www.mjs.gov.dz/",
+      "description": "Jeunesse et sports",
+      "category": "Ministères"
+    },
+    {
+      "name": "Ministère de la Solidarité",
+      "url": "https://www.msnfcf.gov.dz/",
+      "description": "Solidarité, famille et condition féminine",
+      "category": "Ministères"
+    },
+    {
+      "name": "Direction Générale de la Sûreté Nationale",
+      "url": "http://www.dgsn.dz/",
+      "description": "Police algérienne",
+      "category": "Institutions sous tutelle"
+    },
+    {
+      "name": "Direction Générale de la Protection Civile",
+      "url": "http://www.protectioncivile.dz/",
+      "description": "Protection civile et sécurité civile",
+      "category": "Institutions sous tutelle"
+    },
+    {
+      "name": "École Nationale des Transmissions",
+      "url": "https://www.interieur.gov.dz/",
+      "description": "École militaire des transmissions",
+      "category": "Institutions sous tutelle"
+    },
+    {
+      "name": "École Nationale d'Administration",
+      "url": "http://www.ena.dz/",
+      "description": "ENA — École nationale d'administration",
+      "category": "Institutions sous tutelle"
+    },
+    {
+      "name": "École Nationale des Ingénieurs de la Ville",
+      "url": "http://www.eniv.dz/",
+      "description": "ENIV — École nationale des ingénieurs de la ville",
+      "category": "Institutions sous tutelle"
+    },
+    {
+      "name": "Délégation Nationale à la Sécurité Routière",
+      "url": "http://dnsr.interieur.gov.dz/",
+      "description": "Sécurité routière",
+      "category": "Institutions sous tutelle"
+    },
+    {
+      "name": "Délégation Nationale aux Risques Majeurs",
+      "url": "http://dnrm.interieur.gov.dz/",
+      "description": "Gestion des risques majeurs",
+      "category": "Institutions sous tutelle"
+    },
+    {
+      "name": "Centres Nationaux de formation",
+      "url": "https://www.interieur.gov.dz/",
+      "description": "Formation des collectivités locales",
+      "category": "Institutions sous tutelle"
+    },
+    {
+      "name": "Centre National d'Études et d'Analyses",
+      "url": "http://www.ceneap.com.dz/",
+      "description": "CENEAP — Centre national d'études et d'analyses pour la population",
+      "category": "Institutions sous tutelle"
+    },
+    {
+      "name": "Centre de Recherche en Astronomie",
+      "url": "http://www.craag.dz/",
+      "description": "CRAAG — Centre de recherche en astronomie, astrophysique et géophysique",
+      "category": "Institutions sous tutelle"
+    },
+    {
+      "name": "Institut National de Santé Publique",
+      "url": "http://www.sante.dz",
+      "description": "INSP — Santé publique",
+      "category": "Organismes & agences"
+    },
+    {
+      "name": "Institut National Algérien de la Propriété Industrielle",
+      "url": "http://www.inapi.org",
+      "description": "INAPI — Propriété industrielle",
+      "category": "Organismes & agences"
+    },
+    {
+      "name": "Institut National de Formation des Cadres",
+      "url": "http://www.infpe.edu.dz",
+      "description": "INFPE — Formation de l'éducation",
+      "category": "Organismes & agences"
+    },
+    {
+      "name": "Institut de Formation Professionnelle d'Alger",
+      "url": "http://www.ifp-alger.edu.dz",
+      "description": "IFP Alger — Formation professionnelle",
+      "category": "Organismes & agences"
+    },
+    {
+      "name": "Centre de Recherche en Économie Appliquée",
+      "url": "http://www.cread-dz.com",
+      "description": "CREAD — Recherche économique appliquée",
+      "category": "Organismes & agences"
+    },
+    {
+      "name": "Centre National du Registre du Commerce",
+      "url": "http://www.cnrc.org.dz",
+      "description": "CNRC — Registre du commerce",
+      "category": "Organismes & agences"
+    },
+    {
+      "name": "Agence Nationale du Développement et de l'Investissement",
+      "url": "http://www.andi.dz",
+      "description": "ANDI — Développement et investissement",
+      "category": "Organismes & agences"
+    },
+    {
+      "name": "Agence Nationale pour le Développement de la Recherche Universitaire",
+      "url": "http://www.andru.gov.dz",
+      "description": "ANDRU — Recherche universitaire",
+      "category": "Organismes & agences"
+    },
+    {
+      "name": "Agence Nationale pour l'Amélioration de l'Habitat",
+      "url": "http://www.aadl.com.dz",
+      "description": "AADL — Amélioration et développement de l'habitat",
+      "category": "Organismes & agences"
+    },
+    {
+      "name": "Office National de Recherche Géologique et Minière",
+      "url": "http://www.orgm.com.dz",
+      "description": "ORGM — Géologie et mines",
+      "category": "Organismes & agences"
+    },
+    {
+      "name": "Office National des Statistiques",
+      "url": "http://www.ons.dz",
+      "description": "ONS — Statistiques nationales",
+      "category": "Organismes & agences"
+    },
+    {
+      "name": "Office Algérien de Promotion du Commerce Extérieur",
+      "url": "http://www.promex.dz",
+      "description": "PROMEX — Commerce extérieur",
+      "category": "Organismes & agences"
+    },
+    {
+      "name": "Office National des Examens et Concours",
+      "url": "http://www.onec.dz",
+      "description": "ONEC — Examens et concours",
+      "category": "Organismes & agences"
+    },
+    {
+      "name": "Institut National de Formation en Informatique",
+      "url": "http://www.esi.dz",
+      "description": "ESI — Formation en informatique",
+      "category": "Organismes & agences"
+    },
+    {
+      "name": "Centre de Recherche sur l'Information Scientifique et Technique",
+      "url": "http://www.cerist.dz",
+      "description": "CERIST — Recherche scientifique et technique",
+      "category": "Organismes & agences"
+    },
+    {
+      "name": "Centre de Développement des Technologies Avancées",
+      "url": "http://www.cdta.dz",
+      "description": "CDTA — Technologies avancées",
+      "category": "Organismes & agences"
+    },
+    {
+      "name": "Centre National de Recherche en Anthropologie Sociale",
+      "url": "http://www.crasc.org",
+      "description": "CRASC — Recherche anthropologique",
+      "category": "Organismes & agences"
+    },
+    {
+      "name": "Université d'Alger",
+      "url": "http://www.univ-alger.dz",
+      "description": "Université d'Alger",
+      "category": "Universités & écoles"
+    },
+    {
+      "name": "Université d'Annaba",
+      "url": "http://www.univ-annaba.net",
+      "description": "Université d'Annaba",
+      "category": "Universités & écoles"
+    },
+    {
+      "name": "Université de Blida",
+      "url": "http://www.univ-blida.dz",
+      "description": "Université de Blida",
+      "category": "Universités & écoles"
+    },
+    {
+      "name": "Université de Batna",
+      "url": "http://www.univ-batna.dz",
+      "description": "Université de Batna",
+      "category": "Universités & écoles"
+    },
+    {
+      "name": "Université de Béjaïa",
+      "url": "http://www.univbej.dz",
+      "description": "Université de Béjaïa",
+      "category": "Universités & écoles"
+    },
+    {
+      "name": "Université d'Oran",
+      "url": "http://www.univ-oran.dz",
+      "description": "Université d'Oran",
+      "category": "Universités & écoles"
+    },
+    {
+      "name": "Université de Sidi Bel Abbès",
+      "url": "http://www.univ-sba.dz",
+      "description": "Université de Sidi Bel Abbès",
+      "category": "Universités & écoles"
+    },
+    {
+      "name": "Université de Mostaganem",
+      "url": "http://www.univ-mosta.dz",
+      "description": "Université de Mostaganem",
+      "category": "Universités & écoles"
+    },
+    {
+      "name": "Université de Tlemcen",
+      "url": "http://www.univ-tlemcen.dz",
+      "description": "Université de Tlemcen",
+      "category": "Universités & écoles"
+    },
+    {
+      "name": "Université des Sciences Islamiques Émir Abdelkader",
+      "url": "http://www.univ-emir.dz",
+      "description": "Université Emir Abdelkader",
+      "category": "Universités & écoles"
+    },
+    {
+      "name": "École Nationale Polytechnique d'Alger",
+      "url": "http://www.enp.edu.dz/",
+      "description": "ENP — École polytechnique",
+      "category": "Universités & écoles"
+    },
+    {
+      "name": "École Nationale des Travaux Publics",
+      "url": "http://www.entp.edu.dz",
+      "description": "ENTP — Travaux publics",
+      "category": "Universités & écoles"
+    },
+    {
+      "name": "École Supérieure de Banque",
+      "url": "http://www.esb.edu.dz/",
+      "description": "ESB — École supérieure de banque",
+      "category": "Universités & écoles"
+    },
+    {
+      "name": "École Normale Supérieure de l'Enseignement Technique d'Oran",
+      "url": "http://www.enset-oran.dz/",
+      "description": "ENSET Oran — Formation technique",
+      "category": "Universités & écoles"
+    },
+    {
+      "name": "Institut National d'Informatique",
+      "url": "http://www.ini.dz",
+      "description": "INI — Informatique",
+      "category": "Universités & écoles"
+    },
+    {
+      "name": "École Supérieure de l'Hydraulique",
+      "url": "http://www.ensh.edu.dz",
+      "description": "ENSH — Hydraulique",
+      "category": "Universités & écoles"
+    },
+    {
+      "name": "Institut National de Recherche en Éducation",
+      "url": "http://www.inre.edu.dz",
+      "description": "INRE — Recherche en éducation",
+      "category": "Universités & écoles"
+    },
+    {
+      "name": "Centre National de l'Enseignement Généralisé",
+      "url": "http://www.cneg.edu.dz",
+      "description": "CNEG — Enseignement généralisé",
+      "category": "Universités & écoles"
+    },
+    {
+      "name": "Wilaya d'Alger",
+      "url": "http://www.gga.dz",
+      "description": "Wilaya d'Alger",
+      "category": "Wilayas & collectivités"
+    },
+    {
+      "name": "Wilaya d'Annaba",
+      "url": "http://www.wilayadeannaba.com",
+      "description": "Wilaya d'Annaba",
+      "category": "Wilayas & collectivités"
+    },
+    {
+      "name": "Wilaya de Béjaïa",
+      "url": "http://www.webejaia.gov.dz",
+      "description": "Wilaya de Béjaïa",
+      "category": "Wilayas & collectivités"
+    },
+    {
+      "name": "Wilaya d'Aïn Témouchent",
+      "url": "http://www.wain.temouchent.gov.dz",
+      "description": "Wilaya d'Aïn Témouchent",
+      "category": "Wilayas & collectivités"
+    },
+    {
+      "name": "Wilaya de Bordj Bou Arréridj",
+      "url": "http://www.bba.gov.dz",
+      "description": "Wilaya de Bordj Bou Arréridj",
+      "category": "Wilayas & collectivités"
+    },
+    {
+      "name": "Wilaya de Bouira",
+      "url": "http://www.wbouira.gov.dz",
+      "description": "Wilaya de Bouira",
+      "category": "Wilayas & collectivités"
+    },
+    {
+      "name": "Wilaya de Djelfa",
+      "url": "http://www.wdjelfa.gov.dz",
+      "description": "Wilaya de Djelfa",
+      "category": "Wilayas & collectivités"
+    },
+    {
+      "name": "Wilaya de Mascara",
+      "url": "http://www.wmascara.gov.dz",
+      "description": "Wilaya de Mascara",
+      "category": "Wilayas & collectivités"
+    },
+    {
+      "name": "Wilaya de Skikda",
+      "url": "http://wilayadeskikda.com",
+      "description": "Wilaya de Skikda",
+      "category": "Wilayas & collectivités"
+    },
+    {
+      "name": "Wilaya de Tiaret",
+      "url": "http://www.wtiaret.gov.dz",
+      "description": "Wilaya de Tiaret",
+      "category": "Wilayas & collectivités"
+    },
+    {
+      "name": "Wilaya de Tizi-Ouzou",
+      "url": "http://www.wtiziouzou.gov.dz",
+      "description": "Wilaya de Tizi-Ouzou",
+      "category": "Wilayas & collectivités"
+    },
+    {
+      "name": "APC de Tissemsilt",
+      "url": "http://www.apc-tissemsilt.gov.dz",
+      "description": "Commune de Tissemsilt",
+      "category": "Wilayas & collectivités"
+    },
+    {
+      "name": "APC de Constantine",
+      "url": "http://www.apc-constantine.gov.dz",
+      "description": "Commune de Constantine",
+      "category": "Wilayas & collectivités"
+    }
+  ],
+  "links": [
+    {
+      "name": "Banque extérieure d'Algérie (BEA)",
+      "url": "https://www.bea.dz",
+      "description": "BEA — Banque extérieure d'Algérie",
+      "category": "Banques"
+    },
+    {
+      "name": "Banque nationale d'Algérie (BNA)",
+      "url": "https://www.bna.dz",
+      "description": "BNA — Banque nationale d'Algérie",
+      "category": "Banques"
+    },
+    {
+      "name": "Crédit populaire d'Algérie (CPA)",
+      "url": "https://www.cpa-bank.dz",
+      "description": "CPA — Crédit populaire algérien",
+      "category": "Banques"
+    },
+    {
+      "name": "Banque de développement local (BDL)",
+      "url": "https://www.bdl.dz",
+      "description": "BDL — Banque de développement local",
+      "category": "Banques"
+    },
+    {
+      "name": "Banque de l'agriculture (BADR)",
+      "url": "https://badrbank.dz",
+      "description": "BADR — Banque agricole et de développement rural",
+      "category": "Banques"
+    },
+    {
+      "name": "Caisse nationale d'épargne (CNEP)",
+      "url": "https://www.cnepbanque.dz",
+      "description": "CNEP — Caisse nationale d'épargne et de prévoyance",
+      "category": "Banques"
+    },
+    {
+      "name": "Banque Al Baraka d'Algérie",
+      "url": "https://www.albaraka-bank.dz",
+      "description": "Al Baraka Bank",
+      "category": "Banques"
+    },
+    {
+      "name": "Citibank Algérie",
+      "url": "https://www.citigroup.com/global/about-us/global-presence/algeria",
+      "description": "Citibank N.A. Algérie",
+      "category": "Banques"
+    },
+    {
+      "name": "Arab Banking Corporation — Algérie",
+      "url": "https://www.bank-abc.com/en/CountrySites/Algeria",
+      "description": "Arab Banking Corporation",
+      "category": "Banques"
+    },
+    {
+      "name": "Natixis Algérie",
+      "url": "https://www.natixis.dz",
+      "description": "Natixis — Algérie",
+      "category": "Banques"
+    },
+    {
+      "name": "Société Générale Algérie",
+      "url": "https://www.societegenerale.dz",
+      "description": "Société Générale — Algérie",
+      "category": "Banques"
+    },
+    {
+      "name": "Arab Bank PLC — Algérie",
+      "url": "https://www.arabbank.dz",
+      "description": "Arab Bank Algérie",
+      "category": "Banques"
+    },
+    {
+      "name": "BNP Paribas El-Djazair",
+      "url": "https://www.bnpparibas.dz",
+      "description": "BNP Paribas — Algérie",
+      "category": "Banques"
+    },
+    {
+      "name": "Trust Bank — Algeria",
+      "url": "https://www.trustbank.dz",
+      "description": "Trust Bank",
+      "category": "Banques"
+    },
+    {
+      "name": "Housing Bank For Trade and Finance",
+      "url": "https://www.housingbankdz.com",
+      "description": "Housing Bank — Algeria",
+      "category": "Banques"
+    },
+    {
+      "name": "Gulf Bank Algérie",
+      "url": "https://www.agb.dz",
+      "description": "Gulf Bank — Algérie",
+      "category": "Banques"
+    },
+    {
+      "name": "Fransabank El-Djazair",
+      "url": "https://www.fransabank.dz",
+      "description": "Fransabank — Algérie",
+      "category": "Banques"
+    },
+    {
+      "name": "HSBC Algeria",
+      "url": "https://www.business.algeria.hsbc.com",
+      "description": "H.S.B.C — Algérie",
+      "category": "Banques"
+    },
+    {
+      "name": "Al Salam Bank — Algeria",
+      "url": "https://www.alsalamalgeria.com",
+      "description": "Al Salam Bank",
+      "category": "Banques"
+    },
+    {
+      "name": "Banque nationale de l'habitat (BNH)",
+      "url": "https://bnh.dz",
+      "description": "BNH — Banque nationale de l'habitat",
+      "category": "Banques"
+    },
+    {
+      "name": "Centre International de Presse",
+      "url": "http://www.cip.org.dz/",
+      "description": "CIP — Centre international de presse",
+      "category": "Presse"
+    },
+    {
+      "name": "Algérie Presse Service",
+      "url": "http://www.aps.dz/",
+      "description": "APS — Agence de presse algérienne",
+      "category": "Presse"
+    },
+    {
+      "name": "Agence Algérienne d'Informations",
+      "url": "http://www.aai-online.com/",
+      "description": "AAI — Agence algérienne d'informations",
+      "category": "Presse"
+    },
+    {
+      "name": "Akher Saâ",
+      "url": "http://www.akhersaa-dz.com/",
+      "description": "Akher Saâ — Journal quotidien",
+      "category": "Presse"
+    },
+    {
+      "name": "El Moudjahid",
+      "url": "http://www.elmoudjahid-dz.com/",
+      "description": "El Moudjahid — Journal officiel",
+      "category": "Presse"
+    },
+    {
+      "name": "Al-Fadjr",
+      "url": "http://www.al-fadjr.com/",
+      "description": "Al-Fadjr — Journal",
+      "category": "Presse"
+    },
+    {
+      "name": "El Watan",
+      "url": "http://www.elwatan.com/",
+      "description": "El Watan — Grand quotidien",
+      "category": "Presse"
+    },
+    {
+      "name": "Algeria Daily",
+      "url": "http://www.algeriadaily.com/",
+      "description": "Algeria Daily — Journal anglophone",
+      "category": "Presse"
+    },
+    {
+      "name": "Horizons",
+      "url": "http://www.horizons-dz.com/",
+      "description": "Horizons — Journal économique",
+      "category": "Presse"
+    },
+    {
+      "name": "An-nasr",
+      "url": "http://www.an-nasr.dz/",
+      "description": "An-nasr — Journal",
+      "category": "Presse"
+    },
+    {
+      "name": "Liberté",
+      "url": "http://www.liberte-algerie.com/",
+      "description": "Liberté — Journal d'information",
+      "category": "Presse"
+    },
+    {
+      "name": "Djazair News",
+      "url": "http://www.djazairnews.info/",
+      "description": "Djazair News — Actualité algérienne",
+      "category": "Presse"
+    },
+    {
+      "name": "La Tribune",
+      "url": "http://www.latribune-online.com/",
+      "description": "La Tribune — Journal économique",
+      "category": "Presse"
+    },
+    {
+      "name": "Echaâb",
+      "url": "http://www.ech-chaab.com/",
+      "description": "Echaâb — Journal",
+      "category": "Presse"
+    },
+    {
+      "name": "Le Quotidien d'Oran",
+      "url": "http://www.lequotidien-oran.com/",
+      "description": "Le Quotidien d'Oran",
+      "category": "Presse"
+    },
+    {
+      "name": "Ech-chourouk El-youmi",
+      "url": "http://www.ech-chorouk.com/",
+      "description": "Ech-chourouk — Journal",
+      "category": "Presse"
+    },
+    {
+      "name": "Le Jour d'Algérie",
+      "url": "http://www.lejourdalgerie.com/",
+      "description": "Le Jour d'Algérie",
+      "category": "Presse"
+    },
+    {
+      "name": "El Bilad",
+      "url": "http://www.el-bilad.com/",
+      "description": "El Bilad",
+      "category": "Presse"
+    },
+    {
+      "name": "Le Soir d'Algérie",
+      "url": "http://www.lesoirdalgerie.com/",
+      "description": "Le Soir d'Algérie",
+      "category": "Presse"
+    },
+    {
+      "name": "El Heddaf",
+      "url": "http://www.elheddaf.com/",
+      "description": "El Heddaf",
+      "category": "Presse"
+    },
+    {
+      "name": "La Dépêche de Kabylie",
+      "url": "http://www.depechedekabylie.com/",
+      "description": "La Dépêche de Kabylie",
+      "category": "Presse"
+    },
+    {
+      "name": "El Khabar",
+      "url": "http://www.elkhabar.com/",
+      "description": "El Khabar",
+      "category": "Presse"
+    },
+    {
+      "name": "La Nouvelle République",
+      "url": "http://www.lanouvellerepublique.com/",
+      "description": "La Nouvelle République",
+      "category": "Presse"
+    },
+    {
+      "name": "El Massa",
+      "url": "http://www.el-massa.com/",
+      "description": "El Massa",
+      "category": "Presse"
+    },
+    {
+      "name": "L'Expression",
+      "url": "http://www.lexpressiondz.com/",
+      "description": "L'Expression",
+      "category": "Presse"
+    },
+    {
+      "name": "Akhabar El-Youm",
+      "url": "http://www.akhbarelyoum-dz.com/",
+      "description": "Akhabar El-Youm",
+      "category": "Presse"
+    },
+    {
+      "name": "La Voix de l'Oranie",
+      "url": "http://www.voix-oranie.com/home.php",
+      "description": "La Voix de l'Oranie",
+      "category": "Presse"
+    },
+    {
+      "name": "Ennahar El Djadid",
+      "url": "http://www.ennaharonline.com/",
+      "description": "Ennahar El Djadid",
+      "category": "Presse"
+    },
+    {
+      "name": "L'Authentique",
+      "url": "http://www.lauthentiquedz.net/",
+      "description": "L'Authentique",
+      "category": "Presse"
+    },
+    {
+      "name": "Essafir",
+      "url": "http://www.essafir.net/",
+      "description": "Essafir",
+      "category": "Presse"
+    },
+    {
+      "name": "Le Buteur",
+      "url": "http://www.lebuteur.com/",
+      "description": "Le Buteur",
+      "category": "Presse"
+    },
+    {
+      "name": "Le Courrier d'Algérie",
+      "url": "http://lecourrier-dalgerie.com/",
+      "description": "Le Courrier d'Algérie",
+      "category": "Presse"
+    },
+    {
+      "name": "Le Jeune Indépendant",
+      "url": "http://www.jeune-independant.com/",
+      "description": "Le Jeune Indépendant",
+      "category": "Presse"
+    },
+    {
+      "name": "Les Débats",
+      "url": "http://www.lesdebats.com/",
+      "description": "Les Débats",
+      "category": "Presse"
+    },
+    {
+      "name": "Ouest Tribune",
+      "url": "http://www.ouest-tribune.info/",
+      "description": "Ouest Tribune",
+      "category": "Presse"
+    },
+    {
+      "name": "Le Maghreb — Le quotidien de l'Économie",
+      "url": "http://www.lemaghrebdz.com/",
+      "description": "Le Maghreb",
+      "category": "Presse"
+    },
+    {
+      "name": "Le Temps d'Algérie",
+      "url": "http://www.letempsdalgerie.com/",
+      "description": "Le Temps d'Algérie",
+      "category": "Presse"
+    },
+    {
+      "name": "Documents d'identité",
+      "url": "https://passeport.interieur.gov.dz",
+      "description": "Portail des documents d'identité",
+      "category": "Services numériques"
+    },
+    {
+      "name": "Services numériques en ligne",
+      "url": "https://dzds.dz",
+      "description": "Services numériques du gouvernement algérien",
+      "category": "Services numériques"
+    }
+  ]
+}
