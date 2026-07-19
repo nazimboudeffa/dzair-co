@@ -338,6 +338,7 @@ function generateSiteHtml(sites) {
                     ${items.map(item => `
                         <li>
                             <a href="${item.url}" target="_blank" rel="noopener">${item.name}</a>
+                            <span class="url">${item.url}</span>
                         </li>
                     `).join('')}
                 </ul>
