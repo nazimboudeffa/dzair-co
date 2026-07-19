@@ -551,9 +551,7 @@
       "url": "http://www.apc-constantine.gov.dz",
       "description": "Commune de Constantine",
       "category": "Wilayas & collectivités"
-    }
-  ],
-  "links": [
+    },
     {
       "name": "Banque extérieure d'Algérie (BEA)",
       "url": "https://www.bea.dz",
@@ -894,6 +892,12 @@
       "name": "Le Temps d'Algérie",
       "url": "http://www.letempsdalgerie.com/",
       "description": "Le Temps d'Algérie",
+      "category": "Presse"
+    },
+    {
+      "name": "IT Mag",
+      "url": "https://www.itmag.dz",
+      "description": "Magazine spécialisé dans les technologies de l'information et de la communication",
       "category": "Presse"
     },
     {
