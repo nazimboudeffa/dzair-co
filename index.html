@@ -271,8 +271,7 @@
 <div class="search-section">
 
   <div class="search-box">
-    <!-- Suppression du inline 'oninput="search()"' pour une gestion d'écouteurs d'événements propre en JS -->
-    <input type="text" id="searchInput" placeholder="Rechercher ..." autofocus>
+    <input type="text" id="searchInput" placeholder="Rechercher un site par nom..." autofocus>
     <svg class="search-icon" viewBox="0 0 24 24">
       <path d="M21.71 20.29l-5.01-5.01C17.54 13.68 18 11.91 18 10c0-4.41-3.59-8-8-8S2 5.59 2 10s3.59 8 8 8c1.91 0 3.68-.46 5.28-1.3l5.01 5.01c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41zM10 16c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z"/>
     </svg>
@@ -295,51 +294,27 @@
 </footer>
 
 <script>
-// Variables globales pour stocker l'état
-let sitesData = []; 
+let sitesData = [];
 const searchInput = document.getElementById('searchInput');
 const dropdownList = document.getElementById('dropdown-list');
 const noResults = document.getElementById('no-results');
 
-// 1. Charger les données depuis le fichier JSON externe
-async function chargerAnnuaire() {
-    try {
-        const response = await fetch('sites.json'); // Assure-toi du bon nom/chemin du fichier
-        if (!response.ok) throw new Error(`Erreur HTTP: ${response.status}`);
-        
-        const json = await response.json();
-        sitesData = json.data;
-
-        // Une fois chargé, on vérifie si l'URL contient déjà une requête de recherche
-        initialiserRechercheViaURL();
-    } catch (error) {
-        console.error("Erreur d'acquisition des données de l'annuaire :", error);
-        dropdownList.innerHTML = '<div style="padding: 1rem; color: #d32f2f; text-align:center;">Impossible de charger les données de l\'annuaire pour le moment.</div>';
-    }
-}
-
-// 2. Moteur de rendu et de filtrage
 function executerRecherche() {
     const query = searchInput.value.toLowerCase().trim();
-
-    // Si le champ est vide, on peut choisir de tout vider ou tout afficher. Ici, on nettoie l'affichage si vide.
+    
     if (query === '') {
         dropdownList.innerHTML = '';
-        noResults.style.style.display = 'none';
+        noResults.style.display = 'none';
         return;
     }
-
-    // Filtrage étendu (Nom, Description, Catégorie, URL)
+    
     const resultats = sitesData.filter(site => {
         return (
-            (site.name && site.name.toLowerCase().includes(query)) ||
-            (site.description && site.description.toLowerCase().includes(query)) ||
-            (site.category && site.category.toLowerCase().includes(query)) ||
-            (site.url && site.url.toLowerCase().includes(query))
+            site.name && 
+            site.name.toLowerCase().includes(query)
         );
     });
-
-    // Éléments d'affichage des résultats
+    
     if (resultats.length > 0) {
         let htmlContent = '';
         resultats.forEach(result => {
@@ -363,20 +338,31 @@ function executerRecherche() {
     }
 }
 
-// 3. Gestion du paramètre de recherche SEO (?q=...)
-function initialiserRechercheViaURL() {
+async function chargerAnnuaire() {
+    try {
+        const response = await fetch('sites.json');
+        if (!response.ok) throw new Error(`Erreur HTTP: ${response.status}`);
+        
+        const json = await response.json();
+        sitesData = json.data;
+        
+        initialiserRechercheViaURL();
+    } catch (error) {
+        dropdownList.innerHTML = '<div style="padding: 1rem; color: #d32f2f; text-align:center;">Impossible de charger les données de l\'annuaire pour le moment.</div>';
+    }
+}
+
+async function initialiserRechercheViaURL() {
     const params = new URLSearchParams(window.location.search);
     const q = params.get('q');
+    
     if (q) {
         searchInput.value = q;
         executerRecherche();
     }
 }
 
-// Écouteur d'événement moderne pour le temps réel
 searchInput.addEventListener('input', executerRecherche);
-
-// Lancement au chargement complet du DOM
 document.addEventListener('DOMContentLoaded', chargerAnnuaire);
 </script>
 
