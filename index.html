@@ -310,8 +310,8 @@ function executerRecherche() {
     
     const resultats = sitesData.filter(site => {
         return (
-            site.name && 
-            site.name.toLowerCase().includes(query)
+            (site.name && site.name.toLowerCase().includes(query)) ||
+            (site.url && site.url.toLowerCase().includes(query))
         );
     });
     
@@ -322,11 +322,12 @@ function executerRecherche() {
                 <div class="result-item">
                     <a href="${result.url}" target="_blank" rel="noopener" style="display: flex; justify-content: space-between; align-items: center; padding: 0.8rem 1rem; text-decoration: none; color: var(--text);">
                         <div>
-                            <span style="font-weight: 600; font-size: 1rem; display: block;">${result.name}</span>
-                            <small style="color: var(--muted); font-size: 0.8rem;">${result.description || ''}</small>
-                        </div>
-                        <span style="font-size: 0.85rem; color: var(--green); background: rgba(0,98,51,0.08); padding: 4px 10px; border-radius: 20px; font-weight: 500;">${result.category}</span>
-                    </a>
+                            <h2 style="font-weight: 600; font-size: 1rem; display: block;">${result.name}</h2>
+                            <span style="font-size: 0.85rem; color: var(--green); background: rgba(0,98,51,0.08); padding: 4px 10px; border-radius: 20px; font-weight: 500;">${result.category}</span>
+                            <p style="color: var(--muted); font-size: 0.8rem;">${result.description || ''}</p>
+                            <p style="color: var(--muted); font-size: 0.8rem;">${result.url}</p>
+                        </div>                   
+                     </a>
                 </div>
             `;
         });
