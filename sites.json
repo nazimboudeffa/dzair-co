@@ -44,7 +44,7 @@
     },
     {
       "name": "Ministère de l'Intérieur et des Collectivités locales",
-      "url": "http://www.fr.wikipedia.org/wiki/Minist%C3%A8re_de_l%27Int%C3%A9rieur_et_des_Collectivit%C3%A9s_locales",
+      "url": "https://interieur.gov.dz/",
       "description": "Fiche Wikipedia du ministère",
       "category": "Ministères"
     },
@@ -98,7 +98,7 @@
     },
     {
       "name": "Ministère de la Poste et des Télécommunications",
-      "url": "https://www.mpt.gov.dz/",
+      "url": "https://mcomm.gov.dz/",
       "description": "Poste et télécommunications",
       "category": "Ministères"
     },
@@ -110,7 +110,7 @@
     },
     {
       "name": "Ministère de l'Agriculture",
-      "url": "http://madrp.gov.dz/",
+      "url": "http://madr.gov.dz/",
       "description": "Agriculture et développement rural",
       "category": "Ministères"
     },
@@ -152,7 +152,7 @@
     },
     {
       "name": "Ministère de la Pêche",
-      "url": "https://mpeche.gov.dz/",
+      "url": "N/A",
       "description": "Pêche et productions halieutiques",
       "category": "Ministères"
     },
@@ -194,7 +194,7 @@
     },
     {
       "name": "Ministère de la Jeunesse",
-      "url": "https://www.mjs.gov.dz/",
+      "url": "https://mjeunesse.gov.dz/",
       "description": "Jeunesse et sports",
       "category": "Ministères"
     },
@@ -901,15 +901,21 @@
       "category": "Presse"
     },
     {
-      "name": "Documents d'identité",
+      "name": "Documents biométriques",
       "url": "https://passeport.interieur.gov.dz",
       "description": "Portail des documents d'identité",
       "category": "Services numériques"
     },
     {
-      "name": "Services numériques en ligne",
+      "name": "Dzair Digital Services",
       "url": "https://dzds.dz",
       "description": "Services numériques du gouvernement algérien",
+      "category": "Services numériques"
+    },
+    {
+      "name": "Elmouchir",
+      "url": "https://www.elmouchir.caci.dz/",
+      "description": "Annuaire des entreprises algériennes",
       "category": "Services numériques"
     }
   ]

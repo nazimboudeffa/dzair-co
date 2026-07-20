@@ -6,42 +6,48 @@
       "url": "http://www.fr.wikipedia.org/wiki/Minist%C3%A8re_de_l%27Int%C3%A9rieur_et_des_Collectivit%C3%A9s_locales",
       "description": "Fiche Wikipedia du ministère",
       "category": "Ministères",
-      "erreur_constatee": "Erreur Connexion/DNS"
+      "erreur_constatee": "Erreur Connexion/DNS",
+      "fixed": "true"
     },
     {
       "name": "Ministère de l'Agriculture",
       "url": "http://madrp.gov.dz/",
       "description": "Agriculture et développement rural",
       "category": "Ministères",
-      "erreur_constatee": "Erreur Connexion/DNS"
+      "erreur_constatee": "Erreur Connexion/DNS",
+      "fixed": "true"
     },
     {
       "name": "Ministère de la Communication",
       "url": "https://www.ministerecommunication.gov.dz",
       "description": "Communication et médias",
       "category": "Ministères",
-      "erreur_constatee": "HTTP 500"
+      "erreur_constatee": "HTTP 500",
+      "fixed": "true"
     },
     {
       "name": "Ministère de la Pêche",
       "url": "https://mpeche.gov.dz/",
       "description": "Pêche et productions halieutiques",
       "category": "Ministères",
-      "erreur_constatee": "Erreur Connexion/DNS"
+      "erreur_constatee": "Erreur Connexion/DNS",
+      "fixed": "false"
     },
     {
       "name": "Ministère des Relations avec le Parlement",
       "url": "https://www.mrp.gov.dz/",
       "description": "Relations parlementaires",
       "category": "Ministères",
-      "erreur_constatee": "HTTP 500"
+      "erreur_constatee": "HTTP 500",
+      "fixed": "false"
     },
     {
       "name": "Ministère de la Jeunesse",
       "url": "https://www.mjs.gov.dz/",
       "description": "Jeunesse et sports",
       "category": "Ministères",
-      "erreur_constatee": "Erreur Connexion/DNS"
+      "erreur_constatee": "Erreur Connexion/DNS",
+      "fixed": "true"
     },
     {
       "name": "Ministère de la Solidarité",
