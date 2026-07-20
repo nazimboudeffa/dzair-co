@@ -1,0 +1,614 @@
+{
+  "total_en_panne": 87,
+  "data": [
+    {
+      "name": "Ministère de l'Intérieur et des Collectivités locales",
+      "url": "http://www.fr.wikipedia.org/wiki/Minist%C3%A8re_de_l%27Int%C3%A9rieur_et_des_Collectivit%C3%A9s_locales",
+      "description": "Fiche Wikipedia du ministère",
+      "category": "Ministères",
+      "erreur_constatee": "Hors ligne / Timeout"
+    },
+    {
+      "name": "Ministère des Affaires étrangères",
+      "url": "https://www.mfa.gov.dz/",
+      "description": "Diplomatie et relations internationales",
+      "category": "Ministères",
+      "erreur_constatee": "Hors ligne / Timeout"
+    },
+    {
+      "name": "Services du Premier Ministre",
+      "url": "https://premier-ministre.gov.dz/",
+      "description": "Site du gouvernement algérien",
+      "category": "Pouvoirs publics",
+      "erreur_constatee": "Hors ligne / Timeout"
+    },
+    {
+      "name": "Ministère des Affaires religieuses",
+      "url": "https://m-moudjahidine.dz/",
+      "description": "Religion et wakfs",
+      "category": "Ministères",
+      "erreur_constatee": "Hors ligne / Timeout"
+    },
+    {
+      "name": "Ministère de la Défense Nationale",
+      "url": "https://www.mdn.dz/",
+      "description": "Ministère de la défense et de la sécurité nationale",
+      "category": "Ministères",
+      "erreur_constatee": "Hors ligne / Timeout"
+    },
+    {
+      "name": "Ministère de l'Agriculture",
+      "url": "http://madrp.gov.dz/",
+      "description": "Agriculture et développement rural",
+      "category": "Ministères",
+      "erreur_constatee": "Hors ligne / Timeout"
+    },
+    {
+      "name": "Ministère du Tourisme",
+      "url": "https://www.mta.gov.dz/",
+      "description": "Tourisme et artisanat",
+      "category": "Ministères",
+      "erreur_constatee": "Hors ligne / Timeout"
+    },
+    {
+      "name": "Ministère de la Justice",
+      "url": "https://www.mjustice.dz/ar/",
+      "description": "Justice et garde des sceaux",
+      "category": "Ministères",
+      "erreur_constatee": "Hors ligne / Timeout"
+    },
+    {
+      "name": "Ministère de la Pêche",
+      "url": "https://mpeche.gov.dz/",
+      "description": "Pêche et productions halieutiques",
+      "category": "Ministères",
+      "erreur_constatee": "Hors ligne / Timeout"
+    },
+    {
+      "name": "Ministère de l'Environnement",
+      "url": "https://www.me.gov.dz/",
+      "description": "Environnement et énergies renouvelables",
+      "category": "Ministères",
+      "erreur_constatee": "Hors ligne / Timeout"
+    },
+    {
+      "name": "Ministère de la Communication",
+      "url": "https://www.ministerecommunication.gov.dz",
+      "description": "Communication et médias",
+      "category": "Ministères",
+      "erreur_constatee": "500"
+    },
+    {
+      "name": "Ministère de la Jeunesse",
+      "url": "https://www.mjs.gov.dz/",
+      "description": "Jeunesse et sports",
+      "category": "Ministères",
+      "erreur_constatee": "Hors ligne / Timeout"
+    },
+    {
+      "name": "Ministère des Relations avec le Parlement",
+      "url": "https://www.mrp.gov.dz/",
+      "description": "Relations parlementaires",
+      "category": "Ministères",
+      "erreur_constatee": "500"
+    },
+    {
+      "name": "Ministère de la Solidarité",
+      "url": "https://www.msnfcf.gov.dz/",
+      "description": "Solidarité, famille et condition féminine",
+      "category": "Ministères",
+      "erreur_constatee": "Hors ligne / Timeout"
+    },
+    {
+      "name": "École Nationale des Transmissions",
+      "url": "https://www.interieur.gov.dz/",
+      "description": "École militaire des transmissions",
+      "category": "Institutions sous tutelle",
+      "erreur_constatee": "Hors ligne / Timeout"
+    },
+    {
+      "name": "Délégation Nationale aux Risques Majeurs",
+      "url": "http://dnrm.interieur.gov.dz/",
+      "description": "Gestion des risques majeurs",
+      "category": "Institutions sous tutelle",
+      "erreur_constatee": "Hors ligne / Timeout"
+    },
+    {
+      "name": "École Nationale d'Administration",
+      "url": "http://www.ena.dz/",
+      "description": "ENA — École nationale d'administration",
+      "category": "Institutions sous tutelle",
+      "erreur_constatee": "403"
+    },
+    {
+      "name": "Centres Nationaux de formation",
+      "url": "https://www.interieur.gov.dz/",
+      "description": "Formation des collectivités locales",
+      "category": "Institutions sous tutelle",
+      "erreur_constatee": "Hors ligne / Timeout"
+    },
+    {
+      "name": "Ministère de la Formation",
+      "url": "https://www.mfep.gov.dz/",
+      "description": "Formation professionnelle",
+      "category": "Ministères",
+      "erreur_constatee": "403"
+    },
+    {
+      "name": "Institut National de Santé Publique",
+      "url": "http://www.sante.dz",
+      "description": "INSP — Santé publique",
+      "category": "Organismes & agences",
+      "erreur_constatee": "Hors ligne / Timeout"
+    },
+    {
+      "name": "Centre de Recherche en Économie Appliquée",
+      "url": "http://www.cread-dz.com",
+      "description": "CREAD — Recherche économique appliquée",
+      "category": "Organismes & agences",
+      "erreur_constatee": "Hors ligne / Timeout"
+    },
+    {
+      "name": "Centre National du Registre du Commerce",
+      "url": "http://www.cnrc.org.dz",
+      "description": "CNRC — Registre du commerce",
+      "category": "Organismes & agences",
+      "erreur_constatee": "Hors ligne / Timeout"
+    },
+    {
+      "name": "Agence Nationale du Développement et de l'Investissement",
+      "url": "http://www.andi.dz",
+      "description": "ANDI — Développement et investissement",
+      "category": "Organismes & agences",
+      "erreur_constatee": "Hors ligne / Timeout"
+    },
+    {
+      "name": "Ministère des Travaux publics",
+      "url": "http://www.mtpt.gov.dz/",
+      "description": "Travaux publics et infrastructures",
+      "category": "Ministères",
+      "erreur_constatee": "Hors ligne / Timeout"
+    },
+    {
+      "name": "Agence Nationale pour le Développement de la Recherche Universitaire",
+      "url": "http://www.andru.gov.dz",
+      "description": "ANDRU — Recherche universitaire",
+      "category": "Organismes & agences",
+      "erreur_constatee": "Hors ligne / Timeout"
+    },
+    {
+      "name": "Office National de Recherche Géologique et Minière",
+      "url": "http://www.orgm.com.dz",
+      "description": "ORGM — Géologie et mines",
+      "category": "Organismes & agences",
+      "erreur_constatee": "Hors ligne / Timeout"
+    },
+    {
+      "name": "Ministère des Transports",
+      "url": "https://www.mt.gov.dz/",
+      "description": "Transport et mobility",
+      "category": "Ministères",
+      "erreur_constatee": "Hors ligne / Timeout"
+    },
+    {
+      "name": "Ministère de la Santé",
+      "url": "https://sante.gov.dz/",
+      "description": "Santé publique et services médicaux",
+      "category": "Ministères",
+      "erreur_constatee": "Hors ligne / Timeout"
+    },
+    {
+      "name": "Conseil Constitutionnel",
+      "url": "http://www.conseil-constitutionnel.dz/",
+      "description": "Conseil constitutionnel de la République",
+      "category": "Pouvoirs publics",
+      "erreur_constatee": "Hors ligne / Timeout"
+    },
+    {
+      "name": "Office National des Statistiques",
+      "url": "http://www.ons.dz",
+      "description": "ONS — Statistiques nationales",
+      "category": "Organismes & agences",
+      "erreur_constatee": "Hors ligne / Timeout"
+    },
+    {
+      "name": "Direction Générale de la Sûreté Nationale",
+      "url": "http://www.dgsn.dz/",
+      "description": "Police algérienne",
+      "category": "Institutions sous tutelle",
+      "erreur_constatee": "Hors ligne / Timeout"
+    },
+    {
+      "name": "Direction Générale de la Protection Civile",
+      "url": "http://www.protectioncivile.dz/",
+      "description": "Protection civile et sécurité civile",
+      "category": "Institutions sous tutelle",
+      "erreur_constatee": "Hors ligne / Timeout"
+    },
+    {
+      "name": "Université de Béjaïa",
+      "url": "http://www.univbej.dz",
+      "description": "Université de Béjaïa",
+      "category": "Universités & écoles",
+      "erreur_constatee": "Hors ligne / Timeout"
+    },
+    {
+      "name": "Office Algérien de Promotion du Commerce Extérieur",
+      "url": "http://www.promex.dz",
+      "description": "PROMEX — Commerce extérieur",
+      "category": "Organismes & agences",
+      "erreur_constatee": "Hors ligne / Timeout"
+    },
+    {
+      "name": "Centre National d'Études et d'Analyses",
+      "url": "http://www.ceneap.com.dz/",
+      "description": "CENEAP — Centre national d'études et d'analyses pour la population",
+      "category": "Institutions sous tutelle",
+      "erreur_constatee": "Hors ligne / Timeout"
+    },
+    {
+      "name": "Université d'Oran",
+      "url": "http://www.univ-oran.dz",
+      "description": "Université d'Oran",
+      "category": "Universités & écoles",
+      "erreur_constatee": "Hors ligne / Timeout"
+    },
+    {
+      "name": "Institut National de Formation des Cadres",
+      "url": "http://www.infpe.edu.dz",
+      "description": "INFPE — Formation de l'éducation",
+      "category": "Organismes & agences",
+      "erreur_constatee": "Hors ligne / Timeout"
+    },
+    {
+      "name": "Institut de Formation Professionnelle d'Alger",
+      "url": "http://www.ifp-alger.edu.dz",
+      "description": "IFP Alger — Formation professionnelle",
+      "category": "Organismes & agences",
+      "erreur_constatee": "Hors ligne / Timeout"
+    },
+    {
+      "name": "École Supérieure de l'Hydraulique",
+      "url": "http://www.ensh.edu.dz",
+      "description": "ENSH — Hydraulique",
+      "category": "Universités & écoles",
+      "erreur_constatee": "Hors ligne / Timeout"
+    },
+    {
+      "name": "Wilaya d'Alger",
+      "url": "http://www.gga.dz",
+      "description": "Wilaya d'Alger",
+      "category": "Wilayas & collectivités",
+      "erreur_constatee": "Hors ligne / Timeout"
+    },
+    {
+      "name": "Centre National de l'Enseignement Généralisé",
+      "url": "http://www.cneg.edu.dz",
+      "description": "CNEG — Enseignement généralisé",
+      "category": "Universités & écoles",
+      "erreur_constatee": "Hors ligne / Timeout"
+    },
+    {
+      "name": "Wilaya de Béjaïa",
+      "url": "http://www.webejaia.gov.dz",
+      "description": "Wilaya de Béjaïa",
+      "category": "Wilayas & collectivités",
+      "erreur_constatee": "Hors ligne / Timeout"
+    },
+    {
+      "name": "Wilaya d'Aïn Témouchent",
+      "url": "http://www.wain.temouchent.gov.dz",
+      "description": "Wilaya d'Aïn Témouchent",
+      "category": "Wilayas & collectivités",
+      "erreur_constatee": "Hors ligne / Timeout"
+    },
+    {
+      "name": "Wilaya de Bordj Bou Arréridj",
+      "url": "http://www.bba.gov.dz",
+      "description": "Wilaya de Bordj Bou Arréridj",
+      "category": "Wilayas & collectivités",
+      "erreur_constatee": "Hors ligne / Timeout"
+    },
+    {
+      "name": "Wilaya de Bouira",
+      "url": "http://www.wbouira.gov.dz",
+      "description": "Wilaya de Bouira",
+      "category": "Wilayas & collectivités",
+      "erreur_constatee": "Hors ligne / Timeout"
+    },
+    {
+      "name": "Wilaya de Djelfa",
+      "url": "http://www.wdjelfa.gov.dz",
+      "description": "Wilaya de Djelfa",
+      "category": "Wilayas & collectivités",
+      "erreur_constatee": "Hors ligne / Timeout"
+    },
+    {
+      "name": "Wilaya de Mascara",
+      "url": "http://www.wmascara.gov.dz",
+      "description": "Wilaya de Mascara",
+      "category": "Wilayas & collectivités",
+      "erreur_constatee": "Hors ligne / Timeout"
+    },
+    {
+      "name": "Wilaya de Skikda",
+      "url": "http://wilayadeskikda.com",
+      "description": "Wilaya de Skikda",
+      "category": "Wilayas & collectivités",
+      "erreur_constatee": "Hors ligne / Timeout"
+    },
+    {
+      "name": "Wilaya de Tizi-Ouzou",
+      "url": "http://www.wtiziouzou.gov.dz",
+      "description": "Wilaya de Tizi-Ouzou",
+      "category": "Wilayas & collectivités",
+      "erreur_constatee": "Hors ligne / Timeout"
+    },
+    {
+      "name": "APC de Tissemsilt",
+      "url": "http://www.apc-tissemsilt.gov.dz",
+      "description": "Commune de Tissemsilt",
+      "category": "Wilayas & collectivités",
+      "erreur_constatee": "Hors ligne / Timeout"
+    },
+    {
+      "name": "Wilaya de Tiaret",
+      "url": "http://www.wtiaret.gov.dz",
+      "description": "Wilaya de Tiaret",
+      "category": "Wilayas & collectivités",
+      "erreur_constatee": "Hors ligne / Timeout"
+    },
+    {
+      "name": "APC de Constantine",
+      "url": "http://www.apc-constantine.gov.dz",
+      "description": "Commune de Constantine",
+      "category": "Wilayas & collectivités",
+      "erreur_constatee": "Hors ligne / Timeout"
+    },
+    {
+      "name": "Présidence de la République",
+      "url": "https://www.el-mouradia.dz",
+      "description": "Site officiel de la Présidence de la République algérienne",
+      "category": "Pouvoirs publics",
+      "erreur_constatee": "Hors ligne / Timeout"
+    },
+    {
+      "name": "Wilaya d'Annaba",
+      "url": "http://www.wilayadeannaba.com",
+      "description": "Wilaya d'Annaba",
+      "category": "Wilayas & collectivités",
+      "erreur_constatee": "400"
+    },
+    {
+      "name": "École Nationale des Travaux Publics",
+      "url": "http://www.entp.edu.dz",
+      "description": "ENTP — Travaux publics",
+      "category": "Universités & écoles",
+      "erreur_constatee": "Hors ligne / Timeout"
+    },
+    {
+      "name": "École Normale Supérieure de l'Enseignement Technique d'Oran",
+      "url": "http://www.enset-oran.dz/",
+      "description": "ENSET Oran — Formation technique",
+      "category": "Universités & écoles",
+      "erreur_constatee": "Hors ligne / Timeout"
+    },
+    {
+      "name": "Conseil de la Nation (Sénat)",
+      "url": "http://www.majliselouma.dz/",
+      "description": "Sénat de l'Algérie",
+      "category": "Pouvoirs publics",
+      "erreur_constatee": "Hors ligne / Timeout"
+    },
+    {
+      "name": "Institut National de Recherche en Éducation",
+      "url": "http://www.inre.edu.dz",
+      "description": "INRE — Recherche en éducation",
+      "category": "Universités & écoles",
+      "erreur_constatee": "Hors ligne / Timeout"
+    },
+    {
+      "name": "Office National des Examens et Concours",
+      "url": "http://www.onec.dz",
+      "description": "ONEC — Examens et concours",
+      "category": "Organismes & agences",
+      "erreur_constatee": "Hors ligne / Timeout"
+    },
+    {
+      "name": "Centre de Développement des Technologies Avancées",
+      "url": "http://www.cdta.dz",
+      "description": "CDTA — Technologies avancées",
+      "category": "Organismes & agences",
+      "erreur_constatee": "Hors ligne / Timeout"
+    },
+    {
+      "name": "Institut National d'Informatique",
+      "url": "http://www.ini.dz",
+      "description": "INI — Informatique",
+      "category": "Universités & écoles",
+      "erreur_constatee": "Hors ligne / Timeout"
+    },
+    {
+      "name": "Centre International de Presse",
+      "url": "http://www.cip.org.dz/",
+      "description": "CIP — Centre international de presse",
+      "category": "Presse",
+      "erreur_constatee": "Hors ligne / Timeout"
+    },
+    {
+      "name": "Agence Algérienne d'Informations",
+      "url": "http://www.aai-online.com/",
+      "description": "AAI — Agence algérienne d'informations",
+      "category": "Presse",
+      "erreur_constatee": "Hors ligne / Timeout"
+    },
+    {
+      "name": "Akher Saâ",
+      "url": "http://www.akhersaa-dz.com/",
+      "description": "Akher Saâ — Journal quotidien",
+      "category": "Presse",
+      "erreur_constatee": "Hors ligne / Timeout"
+    },
+    {
+      "name": "Al-Fadjr",
+      "url": "http://www.al-fadjr.com/",
+      "description": "Al-Fadjr — Journal",
+      "category": "Presse",
+      "erreur_constatee": "Hors ligne / Timeout"
+    },
+    {
+      "name": "Banque nationale de l'habitat (BNH)",
+      "url": "https://bnh.dz",
+      "description": "BNH — Banque nationale de l'habitat",
+      "category": "Banques",
+      "erreur_constatee": "Hors ligne / Timeout"
+    },
+    {
+      "name": "Délégation Nationale à la Sécurité Routière",
+      "url": "http://dnsr.interieur.gov.dz/",
+      "description": "Sécurité routière",
+      "category": "Institutions sous tutelle",
+      "erreur_constatee": "Hors ligne / Timeout"
+    },
+    {
+      "name": "El Watan",
+      "url": "http://www.elwatan.com/",
+      "description": "El Watan — Grand quotidien",
+      "category": "Presse",
+      "erreur_constatee": "400"
+    },
+    {
+      "name": "La Tribune",
+      "url": "http://www.latribune-online.com/",
+      "description": "La Tribune — Journal économique",
+      "category": "Presse",
+      "erreur_constatee": "Hors ligne / Timeout"
+    },
+    {
+      "name": "Banque extérieure d'Algérie (BEA)",
+      "url": "https://www.bea.dz",
+      "description": "BEA — Banque extérieure d'Algérie",
+      "category": "Banques",
+      "erreur_constatee": "Hors ligne / Timeout"
+    },
+    {
+      "name": "El Bilad",
+      "url": "http://www.el-bilad.com/",
+      "description": "El Bilad",
+      "category": "Presse",
+      "erreur_constatee": "Hors ligne / Timeout"
+    },
+    {
+      "name": "Djazair News",
+      "url": "http://www.djazairnews.info/",
+      "description": "Djazair News — Actualité algérienne",
+      "category": "Presse",
+      "erreur_constatee": "530"
+    },
+    {
+      "name": "Université des Sciences Islamiques Émir Abdelkader",
+      "url": "http://www.univ-emir.dz",
+      "description": "Université Emir Abdelkader",
+      "category": "Universités & écoles",
+      "erreur_constatee": "Hors ligne / Timeout"
+    },
+    {
+      "name": "L'Expression",
+      "url": "http://www.lexpressiondz.com/",
+      "description": "L'Expression",
+      "category": "Presse",
+      "erreur_constatee": "403"
+    },
+    {
+      "name": "Essafir",
+      "url": "http://www.essafir.net/",
+      "description": "Essafir",
+      "category": "Presse",
+      "erreur_constatee": "Hors ligne / Timeout"
+    },
+    {
+      "name": "Le Soir d'Algérie",
+      "url": "http://www.lesoirdalgerie.com/",
+      "description": "Le Soir d'Algérie",
+      "category": "Presse",
+      "erreur_constatee": "403"
+    },
+    {
+      "name": "Ouest Tribune",
+      "url": "http://www.ouest-tribune.info/",
+      "description": "Ouest Tribune",
+      "category": "Presse",
+      "erreur_constatee": "Hors ligne / Timeout"
+    },
+    {
+      "name": "Le Temps d'Algérie",
+      "url": "http://www.letempsdalgerie.com/",
+      "description": "Le Temps d'Algérie",
+      "category": "Presse",
+      "erreur_constatee": "Hors ligne / Timeout"
+    },
+    {
+      "name": "La Nouvelle République",
+      "url": "http://www.lanouvellerepublique.com/",
+      "description": "La Nouvelle République",
+      "category": "Presse",
+      "erreur_constatee": "526"
+    },
+    {
+      "name": "Documents d'identité",
+      "url": "https://passeport.interieur.gov.dz",
+      "description": "Portail des documents d'identité",
+      "category": "Services numériques",
+      "erreur_constatee": "Hors ligne / Timeout"
+    },
+    {
+      "name": "Services numériques en ligne",
+      "url": "https://dzds.dz",
+      "description": "Services numériques du gouvernement algérien",
+      "category": "Services numériques",
+      "erreur_constatee": "Hors ligne / Timeout"
+    },
+    {
+      "name": "El Moudjahid",
+      "url": "http://www.elmoudjahid-dz.com/",
+      "description": "El Moudjahid — Journal officiel",
+      "category": "Presse",
+      "erreur_constatee": "Hors ligne / Timeout"
+    },
+    {
+      "name": "An-nasr",
+      "url": "http://www.an-nasr.dz/",
+      "description": "An-nasr — Journal",
+      "category": "Presse",
+      "erreur_constatee": "Hors ligne / Timeout"
+    },
+    {
+      "name": "Le Courrier d'Algérie",
+      "url": "http://lecourrier-dalgerie.com/",
+      "description": "Le Courrier d'Algérie",
+      "category": "Presse",
+      "erreur_constatee": "Hors ligne / Timeout"
+    },
+    {
+      "name": "Akhabar El-Youm",
+      "url": "http://www.akhbarelyoum-dz.com/",
+      "description": "Akhabar El-Youm",
+      "category": "Presse",
+      "erreur_constatee": "Hors ligne / Timeout"
+    },
+    {
+      "name": "Algeria Daily",
+      "url": "http://www.algeriadaily.com/",
+      "description": "Algeria Daily — Journal anglophone",
+      "category": "Presse",
+      "erreur_constatee": "Hors ligne / Timeout"
+    },
+    {
+      "name": "Caisse nationale d'épargne (CNEP)",
+      "url": "https://www.cnepbanque.dz",
+      "description": "CNEP — Caisse nationale d'épargne et de prévoyance",
+      "category": "Banques",
+      "erreur_constatee": "Hors ligne / Timeout"
+    }
+  ]
+}
