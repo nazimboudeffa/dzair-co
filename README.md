@@ -1,6 +1,6 @@
 # dzair.co
 
-Annuaire collaboratif des sites algériens.
+Annuaire communautaire en ligne des sites algériens.
 
 ## Description
 
