@@ -917,6 +917,12 @@
       "url": "https://www.elmouchir.caci.dz/",
       "description": "Annuaire des entreprises algériennes",
       "category": "Services numériques"
+    },
+    {
+      "name": "Elhanaa",
+      "url": "https://elhanaa.cnas.dz/",
+      "description": "Service CNAS",
+      "category": "Services numériques"
     }
   ]
 }
