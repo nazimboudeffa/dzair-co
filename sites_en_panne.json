@@ -82,7 +82,8 @@
       "url": "http://www.sante.dz",
       "description": "INSP — Santé publique",
       "category": "Organismes & agences",
-      "erreur_constatee": "Erreur Connexion/DNS"
+      "erreur_constatee": "Erreur Connexion/DNS",
+      "new_url": "https://insp.dz/"
     },
     {
       "name": "Ministère des Travaux publics",
@@ -96,14 +97,16 @@
       "url": "http://www.cread-dz.com",
       "description": "CREAD — Recherche économique appliquée",
       "category": "Organismes & agences",
-      "erreur_constatee": "Erreur Connexion/DNS"
+      "erreur_constatee": "Erreur Connexion/DNS",
+      "new_url": "https://cread.dz/"
     },
     {
       "name": "Centre National du Registre du Commerce",
       "url": "http://www.cnrc.org.dz",
       "description": "CNRC — Registre du commerce",
       "category": "Organismes & agences",
-      "erreur_constatee": "Erreur Connexion/DNS"
+      "erreur_constatee": "Erreur Connexion/DNS",
+      "new_url": "https://sidjilcom.cnrc.dz/"
     },
     {
       "name": "Ministère des Transports",
@@ -201,7 +204,8 @@
       "url": "http://www.entp.edu.dz",
       "description": "ENTP — Travaux publics",
       "category": "Universités & écoles",
-      "erreur_constatee": "Erreur Connexion/DNS"
+      "erreur_constatee": "Erreur Connexion/DNS",
+      "new_url": "https://mtpib.dz/"
     },
     {
       "name": "École Supérieure de l'Hydraulique",
@@ -222,7 +226,8 @@
       "url": "http://www.gga.dz",
       "description": "Wilaya d'Alger",
       "category": "Wilayas & collectivités",
-      "erreur_constatee": "Erreur Connexion/DNS"
+      "erreur_constatee": "Erreur Connexion/DNS",
+      "new_url": "https://wilaya-alger.dz/"
     },
     {
       "name": "École Normale Supérieure de l'Enseignement Technique d'Oran",
@@ -236,7 +241,8 @@
       "url": "http://www.webejaia.gov.dz",
       "description": "Wilaya de Béjaïa",
       "category": "Wilayas & collectivités",
-      "erreur_constatee": "Erreur Connexion/DNS"
+      "erreur_constatee": "Erreur Connexion/DNS",
+      "new_url": "https://wilaya-bejaia.dz/"
     },
     {
       "name": "Wilaya d'Aïn Témouchent",
@@ -376,7 +382,8 @@
       "url": "http://www.elwatan.com/",
       "description": "El Watan — Grand quotidien",
       "category": "Presse",
-      "erreur_constatee": "HTTP 400"
+      "erreur_constatee": "HTTP 400",
+      "new_url": "https://elwatan.dz/"
     },
     {
       "name": "Délégation Nationale à la Sécurité Routière",
