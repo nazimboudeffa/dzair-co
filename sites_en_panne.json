@@ -7,7 +7,7 @@
       "description": "Fiche Wikipedia du ministère",
       "category": "Ministères",
       "erreur_constatee": "Erreur Connexion/DNS",
-      "fixed": "true"
+      "new_url": "https://www.interieur.gov.dz/"
     },
     {
       "name": "Ministère de l'Agriculture",
@@ -15,7 +15,7 @@
       "description": "Agriculture et développement rural",
       "category": "Ministères",
       "erreur_constatee": "Erreur Connexion/DNS",
-      "fixed": "true"
+      "new_url": "http://madr.gov.dz/"
     },
     {
       "name": "Ministère de la Communication",
@@ -23,7 +23,7 @@
       "description": "Communication et médias",
       "category": "Ministères",
       "erreur_constatee": "HTTP 500",
-      "fixed": "true"
+      "new_url": "https://mcomm.gov.dz/"
     },
     {
       "name": "Ministère de la Pêche",
@@ -31,7 +31,7 @@
       "description": "Pêche et productions halieutiques",
       "category": "Ministères",
       "erreur_constatee": "Erreur Connexion/DNS",
-      "fixed": "false"
+      "new_url": "null"
     },
     {
       "name": "Ministère des Relations avec le Parlement",
@@ -39,7 +39,7 @@
       "description": "Relations parlementaires",
       "category": "Ministères",
       "erreur_constatee": "HTTP 500",
-      "fixed": "false"
+      "new_url": "null"
     },
     {
       "name": "Ministère de la Jeunesse",
@@ -47,7 +47,7 @@
       "description": "Jeunesse et sports",
       "category": "Ministères",
       "erreur_constatee": "Erreur Connexion/DNS",
-      "fixed": "true"
+      "new_url": "https://mjeunesse.gov.dz/"
     },
     {
       "name": "Ministère de la Solidarité",
