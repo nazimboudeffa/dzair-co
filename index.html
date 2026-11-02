@@ -197,6 +197,39 @@
     border-color: var(--green);
     box-shadow: 0 4px 14px rgba(0,0,0,0.08), 0 0 0 3px rgba(0,98,51,0.15);
   }
+  .search-box input::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    appearance: none;
+  }
+  .search-box input[type="search"] {
+    padding-right: 3.4rem;
+  }
+  .clear-search {
+    position: absolute;
+    right: 0.9rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 50%;
+    background: #eef2f0;
+    color: #4a5a50;
+    font-size: 1.2rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+  }
+  .clear-search:hover,
+  .clear-search:focus-visible {
+    background: var(--green);
+    color: #fff;
+    outline: none;
+  }
+  .clear-search[hidden] { display: none; }
   .search-hint {
     text-align: center;
     color: var(--muted);
@@ -214,26 +247,163 @@
     margin-left: auto;
     margin-right: auto;
   }
+  #results-summary {
+    min-height: 1.2em;
+    margin: 0 0.3rem 0.5rem;
+    text-align: right;
+    color: var(--muted);
+    font-size: 0.8rem;
+  }
+  #dropdown-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    max-height: 62vh;
+    overflow-y: auto;
+    padding: 0.1rem;
+    scrollbar-width: thin;
+    scrollbar-color: #cbd6d0 transparent;
+  }
   .result-item {
-    border-bottom: 1px solid #e3e3df;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--card);
+    color: var(--text);
+    text-decoration: none;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
   }
-  .result-item:last-child {
-    border-bottom: none;
+  .result-item:hover,
+  .result-item.active {
+    border-color: rgba(0, 98, 51, 0.35);
+    box-shadow: 0 6px 18px rgba(0, 98, 51, 0.1);
+    transform: translateY(-1px);
   }
-  .result-item a {
-    transition: background 0.15s;
+  .result-item:focus-visible {
+    outline: 2px solid var(--green);
+    outline-offset: 2px;
   }
-  .result-item a:hover {
-    background: #f5f5f3;
+  .result-body { min-width: 0; }
+  .result-heading {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
   }
+  .result-title {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  .result-category {
+    padding: 0.15rem 0.55rem;
+    border-radius: 999px;
+    background: rgba(0, 98, 51, 0.08);
+    color: var(--green);
+    font-size: 0.72rem;
+    font-weight: 500;
+    white-space: nowrap;
+  }
+  .result-description {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin: 0.3rem 0 0;
+    color: var(--muted);
+    font-size: 0.82rem;
+    line-height: 1.4;
+  }
+  .result-domain {
+    flex-shrink: 0;
+    padding-top: 0.15rem;
+    color: var(--muted);
+    font-size: 0.78rem;
+    white-space: nowrap;
+  }
+  .result-item mark {
+    padding: 0 0.08em;
+    border-radius: 3px;
+    background: #fff1a8;
+    color: inherit;
+  }
+  #no-results {
+    padding: 1.2rem;
+    border: 1px dashed var(--border);
+    border-radius: 12px;
+    background: var(--card);
+    color: var(--muted);
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  #no-results[hidden] { display: none; }
   footer {
     text-align: center;
     color: var(--muted);
-    font-size: 0.8rem;
-    padding: 2rem 1rem;
+    font-size: 0.85rem;
+    padding: 2.5rem 1rem 2rem;
+    margin-top: auto;
   }
-  footer a {
-    text-align: left;
+  footer .footer-content {
+    max-width: 980px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+  footer .footer-subdomains {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem;
+  }
+  footer .footer-subdomains a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.4rem 0.9rem;
+    border-radius: 999px;
+    background: #f0f4f2;
+    color: var(--green);
+    text-decoration: none;
+    font-size: 0.82rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    border: 1px solid rgba(0, 98, 51, 0.15);
+  }
+  footer .footer-subdomains a:hover {
+    background: var(--green);
+    color: #fff;
+    border-color: var(--green);
+    box-shadow: 0 4px 12px rgba(0, 98, 51, 0.18);
+  }
+  footer .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8rem 1.2rem;
+    color: var(--muted);
+  }
+  footer .footer-links a {
+    color: var(--green);
+    text-decoration: none;
+  }
+  footer .footer-links a:hover {
+    text-decoration: underline;
+  }
+  footer .footer-note {
+    color: var(--muted);
+  }
+  footer .footer-note a {
+    color: var(--green);
+    text-decoration: none;
+  }
+  footer .footer-note a:hover {
+    text-decoration: underline;
   }
 
   #all-links { display: none; }
@@ -244,9 +414,16 @@
     nav.main-nav { gap: 0.6rem; flex-wrap: wrap; }
     nav.main-nav a { font-size: 0.82rem; padding: 0.25rem 0.6rem; }
     .search-section { padding: 1.5rem 1rem 3rem; }
-    .search-box input { padding: 1rem 1rem 1rem 2.8rem; font-size: 1rem; }
-    .result-item { flex-wrap: wrap; }
-    .result-url { text-align: left; flex-basis: 100%; }
+    .search-box input { padding: 1rem 3.2rem 1rem 2.8rem; font-size: 1rem; }
+    #dropdown-list { max-height: 70vh; }
+    .result-item { gap: 0.75rem; padding: 0.8rem; }
+    .result-domain { font-size: 0.75rem; }
+  }
+
+  @media (max-width: 640px) {
+    .result-item { flex-direction: column; gap: 0.25rem; }
+    .result-domain { padding-top: 0; }
+    #dropdown-list { max-height: none; }
   }
 
   @media (max-width: 480px) {
@@ -275,102 +452,401 @@
 
   <div class="search-wrapper">
     <div class="search-box">
-      <input type="text" id="searchInput" placeholder="Rechercher ..." autofocus>
-      <svg class="search-icon" viewBox="0 0 24 24">
+      <input type="search" id="searchInput" placeholder="Rechercher un site, une catégorie..." autofocus autocomplete="off" spellcheck="false" role="combobox" aria-autocomplete="list" aria-controls="dropdown-list" aria-expanded="false" aria-label="Rechercher dans l'annuaire">
+      <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true">
         <path d="M21.71 20.29l-5.01-5.01C17.54 13.68 18 11.91 18 10c0-4.41-3.59-8-8-8S2 5.59 2 10s3.59 8 8 8c1.91 0 3.68-.46 5.28-1.3l5.01 5.01c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41zM10 16c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z"/>
       </svg>
+      <button type="button" class="clear-search" id="clearSearch" aria-label="Effacer la recherche" hidden>&times;</button>
     </div>
+    <p class="search-hint">
+      <span id="site-count"></span><span id="site-count-separator" hidden> · </span>
+      Recherche par nom, catégorie ou mot-clé ·
+      <a href="explore.html">parcourir les catégories</a>
+    </p>
   </div>
 
   <div id="search-dropdown">
-    <div id="dropdown-list"></div>
-    <div id="no-results" style="padding: 1rem; text-align: center; color: #6b6b6b; font-size: 0.9rem; display: none;">Aucun résultat trouvé</div>
+    <div id="results-summary" role="status" aria-live="polite"></div>
+    <div id="dropdown-list" role="listbox" aria-label="Résultats de recherche"></div>
+    <div id="no-results" role="status" aria-live="polite" hidden>Aucun résultat trouvé.</div>
   </div>
 </div>
 
 <footer>
-  Si vous voulez avoir un sous domaine contactez nous, c'est gratuit
-  <p>
-    <a href="https://football.dzair.co" target="_blank" rel="noopener">football.dzair.co</a>
-    <a href="https://eye.dzair.co" target="_blank" rel="noopener">eye.dzair.co</a>
-    <a href="https://el-manchar.dzair.co" target="_blank" rel="noopener">el-manchar.dzair.co</a>
-    <a href="https://games.dzair.co" target="_blank" rel="noopener">games.dzair.co</a>
-  </p>
-    Annuaire communautaire en ligne. <a href="https://github.com/nazimboudeffa/dzair-co" target="_blank" rel="noopener">GitHub</a>.
+  <div class="footer-content">
+    <div class="footer-note">
+      Vous souhaitez obtenir un <strong>sous-domaine</strong> sur <strong>dzair.co</strong> ?
+      <a href="about.html#sous-domaines">Contactez-nous</a>, c'est gratuit.
+    </div>
+    <div class="footer-subdomains" aria-label="Sous-domaines dzair.co">
+      <a href="https://football.dzair.co" target="_blank" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2Zm0 18a8 8 0 0 1-6.32-3.16l.26-.39 2.61-.52 1.09-3.26 1.8-1.35V9.8l1.31-.52 1.78.89 1.29-.43.46-1.84a8 8 0 0 1 1.09 2.09l-.62.93-1.37.68-.25 1.5 1.37.68.25 1.62A8 8 0 0 1 12 20Zm6.4-6.49-.22-1.37-1.37-.68-.25-1.5 1.37-.68.62-.93a8 8 0 0 1-1.48-2.73l-.4 1.6-1.29.43-1.78-.89L12 9.8v1.62l-1.8 1.35-1.09 3.26-2.61.52-.16.24A8 8 0 0 1 4 12c0-.34 0-.67.06-1l1.37.46.87-1.74-.4-1.2A8 8 0 0 1 12 4a7.9 7.9 0 0 1 3.55.84l-.24.96-1.31.52-.43 1.74 1.31.87 1.87-.47a7.93 7.93 0 0 1 2.44 5.58Z"/></svg>
+        football.dzair.co
+      </a>
+      <a href="https://eye.dzair.co" target="_blank" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5C21.27 7.61 17 4.5 12 4.5Zm0 12a5 5 0 1 1 5-5 5 5 0 0 1-5 5Zm0-8a3 3 0 1 0 3 3 3 3 0 0 0-3-3Z"/></svg>
+        eye.dzair.co
+      </a>
+      <a href="https://el-manchar.dzair.co" target="_blank" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2Zm-5 14H7v-2h7Zm3-4H7v-2h10Zm0-4H7V7h10Z"/></svg>
+        el-manchar.dzair.co
+      </a>
+      <a href="https://games.dzair.co" target="_blank" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21 6H3a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1ZM8 13H6v2H4v-2H2v-2h2V9h2v2h2Zm7 2a1 1 0 1 1 1-1 1 1 0 0 1-1 1Zm3-3a1 1 0 1 1 1-1 1 1 0 0 1-1 1Z"/></svg>
+        games.dzair.co
+      </a>
+    </div>
+    <div class="footer-links">
+      <a href="index.html">Accueil</a>
+      <a href="explore.html">Explorer</a>
+      <a href="about.html">À propos</a>
+      <a href="https://forum.dzair.co" target="_blank" rel="noopener">Forum</a>
+      <a href="https://github.com/nazimboudeffa/dzair-co" target="_blank" rel="noopener">GitHub</a>
+    </div>
+    <div class="footer-note">Annuaire communautaire en ligne des sites algériens.</div>
+  </div>
 </footer>
 
 <script>
 let sitesData = [];
+let searchIndex = [];
+let currentResults = [];
+let activeIndex = -1;
+let searchTimer = null;
+
+const MAX_RESULTS = 40;
 const searchInput = document.getElementById('searchInput');
 const dropdownList = document.getElementById('dropdown-list');
 const noResults = document.getElementById('no-results');
+const resultsSummary = document.getElementById('results-summary');
+const clearSearch = document.getElementById('clearSearch');
+const siteCountEl = document.getElementById('site-count');
+const siteCountSep = document.getElementById('site-count-separator');
+
+const HTML_ESCAPES = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' };
+
+function escapeHtml(value) {
+    return String(value == null ? '' : value).replace(/[&<>"']/g, (char) => HTML_ESCAPES[char]);
+}
+
+function normalizeForSearch(value) {
+    return String(value == null ? '' : value)
+        .toLowerCase()
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .replace(/œ/g, 'oe')
+        .replace(/æ/g, 'ae')
+        .replace(/[^a-z0-9]+/g, ' ')
+        .trim();
+}
+
+function tokensFromQuery(value) {
+    return [...new Set(normalizeForSearch(value).split(' ').filter(Boolean))];
+}
+
+function getDomain(url) {
+    try {
+        return new URL(url).hostname.replace(/^www\./, '');
+    } catch (error) {
+        return url || '';
+    }
+}
+
+function buildSearchIndex() {
+    searchIndex = sitesData.map((site, order) => {
+        const name = normalizeForSearch(site.name);
+        const category = normalizeForSearch(site.category);
+        const description = normalizeForSearch(site.description);
+        const url = normalizeForSearch(site.url);
+        return {
+            site,
+            order,
+            name,
+            category,
+            description,
+            url,
+            all: `${name} ${category} ${description} ${url}`
+        };
+    });
+}
+
+function scoreEntry(entry, tokens, fullQuery) {
+    let score = 0;
+
+    for (const token of tokens) {
+        if (!entry.all.includes(token)) return -1;
+
+        if (entry.name === token) score += 120;
+        else if (entry.name.startsWith(token)) score += 80;
+        else if (entry.name.split(' ').includes(token)) score += 60;
+        else if (entry.name.includes(token)) score += 45;
+        else if (entry.category.includes(token)) score += 25;
+        else if (entry.url.includes(token)) score += 18;
+        else if (entry.description.includes(token)) score += 10;
+        else score += 1;
+    }
+
+    if (entry.name === fullQuery) score += 200;
+    else if (entry.name.startsWith(fullQuery)) score += 100;
+    if (entry.category === fullQuery) score += 60;
+
+    return score;
+}
+
+function foldWithMap(value) {
+    let folded = '';
+    const map = [];
+
+    for (let i = 0; i < value.length; i++) {
+        const char = value[i];
+        let base = char.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+        if (char === 'œ' || char === 'Œ') base = 'oe';
+        else if (char === 'æ' || char === 'Æ') base = 'ae';
+        for (let j = 0; j < base.length; j++) {
+            folded += base[j];
+            map.push(i);
+        }
+    }
+
+    return { folded, map };
+}
+
+function highlight(value, tokens) {
+    const text = String(value == null ? '' : value);
+    const highlightTokens = tokens.filter((token) => token.length > 1);
+    if (!highlightTokens.length) return escapeHtml(text);
+
+    const { folded, map } = foldWithMap(text);
+    const ranges = [];
+
+    for (const token of highlightTokens) {
+        let from = 0;
+        let index = folded.indexOf(token, from);
+        while (index !== -1) {
+            const end = index + token.length;
+            const startOriginal = map[index];
+            const endOriginal = map[end - 1] + 1;
+            if (startOriginal !== undefined && endOriginal) ranges.push([startOriginal, endOriginal]);
+            from = end;
+            index = folded.indexOf(token, from);
+        }
+    }
+
+    if (!ranges.length) return escapeHtml(text);
+
+    ranges.sort((a, b) => a[0] - b[0]);
+    const merged = [];
+    for (const [start, end] of ranges) {
+        const last = merged[merged.length - 1];
+        if (last && start <= last[1]) last[1] = Math.max(last[1], end);
+        else merged.push([start, end]);
+    }
+
+    let html = '';
+    let cursor = 0;
+    for (const [start, end] of merged) {
+        html += escapeHtml(text.slice(cursor, start));
+        html += `<mark>${escapeHtml(text.slice(start, end))}</mark>`;
+        cursor = end;
+    }
+    html += escapeHtml(text.slice(cursor));
+    return html;
+}
+
+function updateClearButton() {
+    if (clearSearch) clearSearch.hidden = searchInput.value.trim() === '';
+}
+
+function setExpanded(expanded) {
+    searchInput.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+    if (!expanded) searchInput.removeAttribute('aria-activedescendant');
+}
+
+function resetResults() {
+    dropdownList.innerHTML = '';
+    currentResults = [];
+    activeIndex = -1;
+    if (resultsSummary) resultsSummary.textContent = '';
+    noResults.hidden = true;
+    setExpanded(false);
+}
+
+function updateURL(query) {
+    try {
+        const url = new URL(window.location.href);
+        if (query) url.searchParams.set('q', query);
+        else url.searchParams.delete('q');
+        history.replaceState(null, '', url);
+    } catch (error) {
+        // history.replaceState peut être indisponible selon le contexte (file://).
+    }
+}
+
+function renderResults(results, tokens, total) {
+    activeIndex = -1;
+
+    dropdownList.innerHTML = results.map((site, index) => {
+        const domain = escapeHtml(getDomain(site.url));
+        const href = escapeHtml(site.url);
+        return `
+            <a class="result-item" href="${href}" target="_blank" rel="noopener" role="option" id="search-result-${index}" aria-selected="false">
+                <div class="result-body">
+                    <div class="result-heading">
+                        <span class="result-title">${highlight(site.name, tokens)}</span>
+                        <span class="result-category">${highlight(site.category, tokens)}</span>
+                    </div>
+                    ${site.description ? `<p class="result-description">${highlight(site.description, tokens)}</p>` : ''}
+                </div>
+                <span class="result-domain">${domain}</span>
+            </a>`;
+    }).join('');
+
+    if (resultsSummary) {
+        resultsSummary.textContent = total > results.length
+            ? `${results.length} résultats affichés sur ${total}`
+            : `${total} résultat${total > 1 ? 's' : ''}`;
+    }
+    noResults.hidden = true;
+    setExpanded(true);
+}
 
 function executerRecherche() {
-    const query = searchInput.value.toLowerCase().trim();
-    
-    if (query === '') {
-        dropdownList.innerHTML = '';
-        noResults.style.display = 'none';
+    const rawQuery = searchInput.value.trim();
+    const tokens = tokensFromQuery(rawQuery);
+    updateClearButton();
+    updateURL(rawQuery);
+
+    if (!tokens.length) {
+        resetResults();
         return;
     }
-    
-    const resultats = sitesData.filter(site => {
-        return (
-            (site.name && site.name.toLowerCase().includes(query)) ||
-            (site.url && site.url.toLowerCase().includes(query))
-        );
+
+    const fullQuery = tokens.join(' ');
+    const scored = [];
+
+    for (const entry of searchIndex) {
+        const score = scoreEntry(entry, tokens, fullQuery);
+        if (score >= 0) scored.push({ entry, score });
+    }
+
+    scored.sort((a, b) => {
+        if (b.score !== a.score) return b.score - a.score;
+        return a.entry.order - b.entry.order;
     });
-    
-    if (resultats.length > 0) {
-        let htmlContent = '';
-        resultats.forEach(result => {
-            htmlContent += `
-                <div class="result-item">
-                    <a href="${result.url}" target="_blank" rel="noopener" style="display: flex; justify-content: space-between; align-items: center; padding: 0.8rem 1rem; text-decoration: none; color: var(--text);">
-                        <div>
-                            <h2 style="font-weight: 600; font-size: 1rem; display: block;">${result.name}</h2>
-                            <span style="font-size: 0.85rem; color: var(--green); background: rgba(0,98,51,0.08); padding: 4px 10px; border-radius: 20px; font-weight: 500;">${result.category}</span>
-                            <p style="color: var(--muted); font-size: 0.8rem;">${result.description || ''}</p>
-                            <p style="color: var(--muted); font-size: 0.8rem;">${result.url}</p>
-                        </div>                   
-                     </a>
-                </div>
-            `;
-        });
-        dropdownList.innerHTML = htmlContent;
-        noResults.style.display = 'none';
+
+    currentResults = scored.map((item) => item.entry.site);
+    const visibleResults = currentResults.slice(0, MAX_RESULTS);
+
+    if (currentResults.length > 0) {
+        renderResults(visibleResults, tokens, currentResults.length);
     } else {
         dropdownList.innerHTML = '';
-        noResults.style.display = 'block';
+        if (resultsSummary) resultsSummary.textContent = '0 résultat';
+        noResults.textContent = `Aucun résultat pour « ${rawQuery} ». Essayez un autre mot-clé (ex. ministère, université, banque).`;
+        noResults.hidden = false;
+        setExpanded(true);
     }
+}
+
+function setActiveResult(index) {
+    const links = dropdownList.querySelectorAll('.result-item');
+    if (!links.length) {
+        activeIndex = -1;
+        setExpanded(false);
+        return;
+    }
+
+    activeIndex = index;
+    links.forEach((link, linkIndex) => {
+        const isActive = linkIndex === activeIndex;
+        link.classList.toggle('active', isActive);
+        link.setAttribute('aria-selected', isActive ? 'true' : 'false');
+    });
+
+    if (activeIndex >= 0) {
+        searchInput.setAttribute('aria-activedescendant', links[activeIndex].id);
+        links[activeIndex].scrollIntoView({ block: 'nearest' });
+    } else {
+        searchInput.removeAttribute('aria-activedescendant');
+    }
+}
+
+function clearSearchValue() {
+    searchInput.value = '';
+    executerRecherche();
+    updateClearButton();
+    searchInput.focus();
 }
 
 async function chargerAnnuaire() {
     try {
         const response = await fetch('sites.json');
         if (!response.ok) throw new Error(`Erreur HTTP: ${response.status}`);
-        
+
         const json = await response.json();
-        sitesData = json.data;
-        
+        sitesData = Array.isArray(json.data) ? json.data : [];
+        buildSearchIndex();
+
+        if (siteCountEl) siteCountEl.textContent = `${sitesData.length} sites`;
+        if (siteCountSep) siteCountSep.hidden = sitesData.length === 0;
+
         initialiserRechercheViaURL();
     } catch (error) {
         dropdownList.innerHTML = '<div style="padding: 1rem; color: #d32f2f; text-align:center;">Impossible de charger les données de l\'annuaire pour le moment.</div>';
+        if (resultsSummary) resultsSummary.textContent = '';
     }
 }
 
-async function initialiserRechercheViaURL() {
+function initialiserRechercheViaURL() {
     const params = new URLSearchParams(window.location.search);
     const q = params.get('q');
-    
-    if (q) {
-        searchInput.value = q;
-        executerRecherche();
-    }
+
+    if (q) searchInput.value = q;
+    executerRecherche();
 }
 
-searchInput.addEventListener('input', executerRecherche);
-document.addEventListener('DOMContentLoaded', chargerAnnuaire);
+searchInput.addEventListener('input', () => {
+    updateClearButton();
+    clearTimeout(searchTimer);
+
+    if (!searchInput.value.trim()) {
+        executerRecherche();
+    } else {
+        searchTimer = setTimeout(executerRecherche, 120);
+    }
+});
+
+searchInput.addEventListener('focus', () => {
+    if (searchInput.value.trim()) executerRecherche();
+});
+
+searchInput.addEventListener('keydown', (event) => {
+    const links = dropdownList.querySelectorAll('.result-item');
+
+    if (event.key === 'ArrowDown' && links.length) {
+        event.preventDefault();
+        setActiveResult(activeIndex < links.length - 1 ? activeIndex + 1 : 0);
+    } else if (event.key === 'ArrowUp' && links.length) {
+        event.preventDefault();
+        setActiveResult(activeIndex > 0 ? activeIndex - 1 : links.length - 1);
+    } else if (event.key === 'Enter' && links.length) {
+        event.preventDefault();
+        const target = links[activeIndex >= 0 ? activeIndex : 0];
+        if (target) target.click();
+    } else if (event.key === 'Escape') {
+        event.preventDefault();
+        clearSearchValue();
+    }
+});
+
+if (clearSearch) {
+    clearSearch.addEventListener('click', clearSearchValue);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    updateClearButton();
+    chargerAnnuaire();
+});
 </script>
 
 </body>
