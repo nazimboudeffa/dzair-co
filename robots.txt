@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dzair.co/sitemap.xml

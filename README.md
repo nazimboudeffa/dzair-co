@@ -14,6 +14,7 @@ Annuaire communautaire en ligne des sites algériens.
 - **Catégories organisées** — Pouvoirs publics, Ministères, Institutions, Universités, Wilayas, Banques
 - **Responsive** — fonctionne sur mobile, tablette et bureau
 - **SEO optimisé** — Open Graph, Twitter Cards, données structurées JSON-LD
+- **Indexation** — sitemap XML, règles robots.txt, favicon et manifeste du site
 - **Analytics respectueux** — Plausible (respectueux de la vie privée)
 
 ## Technologies
@@ -29,8 +30,12 @@ Aucun framework, aucune dépendance, aucun outil de build.
 ```
 dzair-co/
 ├── index.html      # Page principale : annuaire avec toutes les catégories
+├── explore.html    # Exploration des catégories de l'annuaire
 ├── about.html      # Page « À propos » du projet
-├── howto.html      # Guide d'utilisation
+├── robots.txt      # Règles d'exploration des moteurs de recherche
+├── sitemap.xml     # Pages publiques à indexer
+├── favicon.svg     # Icône du site
+├── site.webmanifest # Métadonnées de l'application web
 └── README.md       # Ce fichier
 ```
 
