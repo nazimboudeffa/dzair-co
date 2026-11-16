@@ -923,6 +923,12 @@
       "url": "https://elhanaa.cnas.dz/",
       "description": "Service CNAS",
       "category": "Services numériques"
+    },
+    {
+      "name": "DZ Pratique",
+      "url": "https://dzpratique.com",
+      "description": "Guides gratuits des démarches en Algérie (passeport, CNAS, CCP, codes USSD), avec les sources officielles",
+      "category": "Services numériques"
     }
   ]
 }
